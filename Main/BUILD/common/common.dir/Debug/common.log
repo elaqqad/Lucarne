@@ -1,0 +1,27 @@
+﻿Build started 09/04/2015 16:28:44.
+     1>Project "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\common.vcxproj" on node 2 (Rebuild target(s)).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt
+         CMake does not need to re-run because C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp is up-to-date.
+         AutoBindShader
+         C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/drawimage_sh.fp
+          [AutoBindShader] - v0.2 - 2015-04-09 16:28 <drawimage_sh>  
+          [AutoBindShader] including 'C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.vp'
+          [AutoBindShader] parsing   'C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.vp'
+          [AutoBindShader] including 'C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.fp'
+          [AutoBindShader] parsing   'C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.fp'
+          [AutoBindShader] success, generated <drawimage_sh.h>
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src" /I\include /I\lib\x86 /I\Samples\C++\DXUT\Core /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common" /I"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D USE_GLUX /D UNICODE /D _UNICODE /D TW_STATIC /D TW_NO_LIB_PRAGMA /D "DATA_PATH=\"C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015\"" /D "CMAKE_INTDIR=\"Debug\"" /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"common.dir\Debug\\" /Fd"common.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\base.cpp" "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage.cpp"
+         base.cpp
+         drawimage.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\Debug\common.lib" /NOLOGO common.dir\Debug\base.obj
+         common.dir\Debug\drawimage.obj
+         common.vcxproj -> C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\Debug\common.lib
+     1>Done Building Project "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\common.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.76

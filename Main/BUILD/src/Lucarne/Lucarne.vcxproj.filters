@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\tilemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\script.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\tilemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\src\Lucarne\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\data\scripts\coin.lua" />
+    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\data\scripts\player.lua" />
+    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\data\scripts\ennemy.lua" />
+    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\data\scripts\level.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4ED5FFEB-5385-48D1-BE15-C864FE6A92DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8C200C4F-DFBA-4D85-A716-15BBE049BA3E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

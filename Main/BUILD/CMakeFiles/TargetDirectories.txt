@@ -1,0 +1,7 @@
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/luabind/CMakeFiles/ALL_BUILD.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/luabind/CMakeFiles/luabind.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/lua/CMakeFiles/lua.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/common/CMakeFiles/common.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/installer/CMakeFiles/Lucarne_Installer.dir
+C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/src/Lucarne/CMakeFiles/Lucarne.dir
