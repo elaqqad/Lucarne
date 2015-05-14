@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{06E80248-7CC4-44F4-94B7-86E86784E4FC}</ProjectGUID>
+    <ProjectGUID>{FF1560B8-4671-4B20-8647-BFA1B4C53086}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -65,7 +65,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common;C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -75,7 +75,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common;C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -85,7 +85,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common;C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -95,7 +95,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\LibSL;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\loki\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tclap\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\glux\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\png;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\jpeg;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\zlib;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\newmat;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\tinyxml;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\anttweakbar\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\OpenNL\src;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\bin\win32\TAUCS\include;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\SQLite;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\..\LibSL-bin-win32\src\libs\src\hashlibpp\src;\include;\lib\x86;\Samples\C++\DXUT\Core;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common;C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -104,10 +104,10 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015 -BC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD --check-stamp-file C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
+D:\CMake\bin\cmake.exe -HC:/Users/Renaud/Desktop/Lucarne/Main/src-2015 -BC:/Users/Renaud/Desktop/Lucarne/Main/BUILD --check-stamp-file C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -115,12 +115,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015 -BC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD --check-stamp-file C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
+D:\CMake\bin\cmake.exe -HC:/Users/Renaud/Desktop/Lucarne/Main/src-2015 -BC:/Users/Renaud/Desktop/Lucarne/Main/BUILD --check-stamp-file C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -128,12 +128,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015 -BC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD --check-stamp-file C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
+D:\CMake\bin\cmake.exe -HC:/Users/Renaud/Desktop/Lucarne/Main/src-2015 -BC:/Users/Renaud/Desktop/Lucarne/Main/BUILD --check-stamp-file C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -141,12 +141,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015 -BC:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD --check-stamp-file C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
+D:\CMake\bin\cmake.exe -HC:/Users/Renaud/Desktop/Lucarne/Main/src-2015 -BC:/Users/Renaud/Desktop/Lucarne/Main/BUILD --check-stamp-file C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -154,16 +154,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/common/CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/common/common.vcxproj">
-      <Project>F1DCAECF-8793-4945-90AF-669457938509</Project>
+    <ProjectReference Include="C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/common/common.vcxproj">
+      <Project>BE503202-BCBC-48C3-B2FB-D5EE54490854</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

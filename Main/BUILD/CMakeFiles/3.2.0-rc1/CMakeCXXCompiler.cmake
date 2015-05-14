@@ -1,7 +1,7 @@
 set(CMAKE_CXX_COMPILER "C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "MSVC")
-set(CMAKE_CXX_COMPILER_VERSION "18.0.30501.0")
+set(CMAKE_CXX_COMPILER_VERSION "18.0.31101.0")
 set(CMAKE_CXX_COMPILE_FEATURES "cxx_alias_templates;cxx_auto_type;cxx_contextual_conversions;cxx_decltype;cxx_default_function_template_args;cxx_defaulted_functions;cxx_delegating_constructors;cxx_enum_forward_declarations;cxx_explicit_conversions;cxx_extended_friend_declarations;cxx_extern_templates;cxx_final;cxx_lambdas;cxx_local_type_template_args;cxx_long_long_type;cxx_nullptr;cxx_override;cxx_range_for;cxx_raw_string_literals;cxx_right_angle_brackets;cxx_rvalue_references;cxx_static_assert;cxx_strong_enums;cxx_template_template_parameters;cxx_trailing_return_types;cxx_uniform_initialization;cxx_variadic_macros;cxx_variadic_templates")
 set(CMAKE_CXX98_COMPILE_FEATURES "")
 set(CMAKE_CXX11_COMPILE_FEATURES "")

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015
+# Install script for directory: C:/Users/Renaud/Desktop/Lucarne/Main/src-2015
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,10 +29,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/common/cmake_install.cmake")
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/cmake_install.cmake")
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/src/Lucarne/cmake_install.cmake")
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/installer/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/common/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/src/Lucarne/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/installer/cmake_install.cmake")
 
 endif()
 
@@ -42,7 +42,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()

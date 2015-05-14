@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\base.cpp">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\base.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage.cpp">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\drawimage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\drawimage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\common\drawimage_sh.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\common\drawimage_sh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\CMakeLists.txt" />
-    <CustomBuild Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\CMakeFiles\db78b99b1b845c355d397a9596598cbe\drawimage_sh.h.rule">
+    <CustomBuild Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\CMakeFiles\602317b555e97cc3d8a3aa85a96424b2\drawimage_sh.h.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.fp" />
-    <None Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\common\drawimage_sh.vp" />
+    <None Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\drawimage_sh.fp" />
+    <None Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\common\drawimage_sh.vp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4ED5FFEB-5385-48D1-BE15-C864FE6A92DF}</UniqueIdentifier>
+      <UniqueIdentifier>{E44004C0-C960-4BF7-9D47-70114153639C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{8C200C4F-DFBA-4D85-A716-15BBE049BA3E}</UniqueIdentifier>
+      <UniqueIdentifier>{E8514C17-512B-4C97-AC14-624560154648}</UniqueIdentifier>
     </Filter>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{F51A4057-178F-4DE4-B92A-FBFBDAA9EA05}</UniqueIdentifier>
+      <UniqueIdentifier>{69DE6E97-D362-494F-8C61-911F0BB1751C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

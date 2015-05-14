@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/lib
+# Install script for directory: C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,8 +29,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/lua/cmake_install.cmake")
-  include("C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/luabind/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/lua/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/luabind/cmake_install.cmake")
+  include("C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/Box2D/Box2D/cmake_install.cmake")
 
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/src-2015/src/Lucarne
+# Install script for directory: C:/Users/Renaud/Desktop/Lucarne/Main/src-2015/src/Lucarne
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

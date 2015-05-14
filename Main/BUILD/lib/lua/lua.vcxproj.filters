@@ -1,177 +1,177 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lapi.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lapi.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lauxlib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lauxlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lbaselib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lbaselib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lcode.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lcode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldblib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldblib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldebug.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldebug.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldo.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldump.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldump.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lfunc.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lfunc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lgc.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lgc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\linit.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\linit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\liolib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\liolib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\llex.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\llex.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lmathlib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lmathlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lmem.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lmem.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\loadlib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\loadlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lobject.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lobject.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lopcodes.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lopcodes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\loslib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\loslib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lparser.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lparser.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lstate.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lstate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lstring.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lstring.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lstrlib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lstrlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ltable.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ltable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ltablib.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ltablib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ltm.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ltm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lundump.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lundump.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lvm.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lvm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lzio.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lzio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\print.c">
+    <ClCompile Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\print.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lapi.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lapi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lauxlib.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lauxlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lcode.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lcode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldebug.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldebug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ldo.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ldo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lfunc.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lfunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lgc.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lgc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\llex.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\llex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\llimits.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\llimits.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lmem.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lmem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lobject.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lobject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lopcodes.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lopcodes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lparser.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lparser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lstate.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lstate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lstring.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lstring.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ltable.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ltable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\ltm.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\ltm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lua.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lua.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\luaconf.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\luaconf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lualib.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lualib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lundump.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lundump.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lvm.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lvm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\src\lzio.h">
+    <ClInclude Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\src\lzio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\src-2015\lib\lua\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Renaud\Desktop\Lucarne\Main\src-2015\lib\lua\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4ED5FFEB-5385-48D1-BE15-C864FE6A92DF}</UniqueIdentifier>
+      <UniqueIdentifier>{E44004C0-C960-4BF7-9D47-70114153639C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{8C200C4F-DFBA-4D85-A716-15BBE049BA3E}</UniqueIdentifier>
+      <UniqueIdentifier>{E8514C17-512B-4C97-AC14-624560154648}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

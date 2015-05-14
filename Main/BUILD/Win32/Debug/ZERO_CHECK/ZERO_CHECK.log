@@ -1,16 +1,18 @@
-﻿Build started 09/04/2015 16:28:43.
-     1>Project "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\ZERO_CHECK.vcxproj" on node 2 (Rebuild target(s)).
+﻿La génération a démarré 12/05/2015 14:30:56.
+     1>Projet "C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\ZERO_CHECK.vcxproj" sur le nœud 2 (Build cible(s)).
      1>CustomBuild:
          Checking Build System
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/common/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/lua/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/lib/luabind/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/src/Lucarne/CMakeFiles/generate.stamp is up-to-date.
-         CMake does not need to re-run because C:/Users/Mohamed-user/Documents/GitHub/Lucarne/Main/BUILD/installer/CMakeFiles/generate.stamp is up-to-date.
-     1>Done Building Project "C:\Users\Mohamed-user\Documents\GitHub\Lucarne\Main\BUILD\ZERO_CHECK.vcxproj" (Rebuild target(s)).
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/common/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/lua/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/luabind/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/Box2D/Box2D/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/lib/Box2D/Box2D/Box2D/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/src/Lucarne/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/Users/Renaud/Desktop/Lucarne/Main/BUILD/installer/CMakeFiles/generate.stamp is up-to-date.
+     1>Génération du projet "C:\Users\Renaud\Desktop\Lucarne\Main\BUILD\ZERO_CHECK.vcxproj" terminée (Build cible(s)).
 
-Build succeeded.
+La génération a réussi.
 
-Time Elapsed 00:00:00.54
+Temps écoulé 00:00:00.26
