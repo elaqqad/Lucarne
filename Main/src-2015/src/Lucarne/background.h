@@ -13,15 +13,9 @@ using namespace std;
 
 // ------------------------------------------------------------------
 
-typedef struct {
-  DrawImage *image;
-  int i;
-  int j;
-} Screen;
-
 typedef struct
 {
-  DrawImage*    screen;
+  DrawImage* screens[3];
 
   v2i pos;
   

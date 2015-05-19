@@ -20,7 +20,9 @@ Background *background_init(int screenw,int screenh)
 
 void background_draw(Background *bkg)
 {
-    bkg->screen->draw(0, 0);
+	for (int i = 0; i < 3; i++) {
+		bkg->screens[i]->draw(0, 0);
+	}
 }
 
 bool nextLeftBackground(Background *bkg) {
@@ -60,14 +62,16 @@ bool nextDownBackground(Background *bkg) {
 }
 
 bool loadBackground(Background *bkg) {
-	string name = sourcePath() + "/data/screens/" + to_string(bkg->pos[0]) + "_" + to_string(bkg->pos[1]) + ".jpg";
-	if (LibSL::System::File::exists(name.c_str())) {
-		bkg->screen = new DrawImage(name.c_str());
-		return true;
+	for (int i = 0; i < 3; i++) {
+		string name = sourcePath() + "/data/screens/" + to_string(bkg->pos[0]) + "_" + to_string(bkg->pos[1]) + "_" + to_string(i) + ".png";
+		if (LibSL::System::File::exists(name.c_str())) {
+			bkg->screens[i] = new DrawImage(name.c_str(), v3b(255, 64, 255));
+		}
+		else {
+			return false;
+		}
 	}
-	else {
-		return false;
-	}
+	return true;
 }
 
 // ------------------------------------------------------------------
