@@ -15,26 +15,23 @@ using namespace std;
 
 typedef struct {
   DrawImage *image;
-  int x;
-  int y;
-  int w;
-  int h;
-} Tile;
+  int i;
+  int j;
+} Screen;
 
 typedef struct
 {
-  map<string, DrawImage*> images;
-  map<v3b, Tile*>         tiles;
+  map<v2i, DrawImage*>    screens;
 
-  ImageRGBA              *tilemap;
-  int                     tilew;
-  int                     tileh;
-} Tilemap;
+  v2i                     viewpos;
+  
+  int                     screenw;
+  int                     screenh;
+} Background;
 
 // ------------------------------------------------------------------
 
-Tilemap *tilemap_load(string fname);
-void     tilemap_draw(Tilemap *tmap);
-void     tilemap_bind_to_physics(Tilemap *tmap);
+Background *background_init(int w, int h);
+void        background_draw(Background*);
 
 // ------------------------------------------------------------------

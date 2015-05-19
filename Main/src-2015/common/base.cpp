@@ -48,7 +48,8 @@ std::string executablePath()
 
 std::string sourcePath()
 {
-  return std::string(DATA_PATH);
+  std::string str = std::string(DATA_PATH);
+  return str;
 }
 
 // ------------------------------------------------------------------
