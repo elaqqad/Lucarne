@@ -16,8 +16,8 @@ LIBSL_WIN32_FIX;
 // ------------------------------------------------------------------
 
 // Constants
-int    c_ScreenW      = 800;
-int    c_ScreenH      = 600;
+int    c_ScreenW      = 1024;
+int    c_ScreenH      = 576;
 
 // ------------------------------------------------------------------
 
@@ -75,6 +75,40 @@ void mainRender()
     entity_step(g_Entities[a],el);
   }
 
+  //Background & border interaction with the player
+  if (entity_get_pos(g_Player)[0] >= c_ScreenW) { //Right
+	  if (nextRightBackground(g_Bkg) == true) {
+		  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+	  }
+	  else {
+		  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+	  }
+  }
+  else if (entity_get_pos(g_Player)[0] <= 0) { //Left
+	  if (nextLeftBackground(g_Bkg) == true) {
+		  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+	  }
+	  else {
+		  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+	  }
+  }
+  else if (entity_get_pos(g_Player)[1] <= 0) { //Down
+	  if (nextDownBackground(g_Bkg) == true) {
+		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+	  }
+	  else {
+		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+	  }
+  }
+  else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Down
+	  if (nextUpBackground(g_Bkg) == true) {
+		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+	  }
+	  else {
+		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+	  }
+  }
+
   //// Display
 
   clearScreen();
@@ -117,6 +151,7 @@ int main(int argc,const char **argv)
 
     // create background
     g_Bkg = background_init(c_ScreenW, c_ScreenH);
+	loadBackground(g_Bkg);
 
     // load a tilemap
     g_Tilemap = tilemap_load("level.lua");
