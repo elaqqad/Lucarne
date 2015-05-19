@@ -100,7 +100,7 @@ void mainRender()
 		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
 	  }
   }
-  else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Down
+  else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Up
 	  if (nextUpBackground(g_Bkg) == true) {
 		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
 	  }
