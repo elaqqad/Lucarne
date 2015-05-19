@@ -34,5 +34,6 @@
 *.sdf
 *.log
 
-# Build directory
+# Directories
 BUILD
+LibSL-bin-win32
