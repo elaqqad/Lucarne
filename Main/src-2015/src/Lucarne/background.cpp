@@ -65,7 +65,7 @@ bool loadBackground(Background *bkg) {
 	for (int i = 0; i < 3; i++) {
 		string name = sourcePath() + "/data/screens/" + to_string(bkg->pos[0]) + "_" + to_string(bkg->pos[1]) + "_" + to_string(i) + ".png";
 		if (LibSL::System::File::exists(name.c_str())) {
-			bkg->screens[i] = new DrawImage(name.c_str(), v3b(255, 64, 255));
+			bkg->screens[i] = new DrawImage(name.c_str(), v3b(251, 0, 254));
 		}
 		else {
 			return false;
