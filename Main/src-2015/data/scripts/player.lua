@@ -63,9 +63,9 @@ function step()
 
   -- walk if state is 'walk_*'
   if state == 'walk_left' then
-    set_velocity_x(-2.0)
+    set_velocity_x(-20.0)
   elseif state == 'walk_right' then
-    set_velocity_x(2.0)
+    set_velocity_x(20.0)
   end
 
 end

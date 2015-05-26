@@ -61,51 +61,53 @@ void mainRender()
   //// Compute elapsed time
   time_t now = milliseconds();
   time_t el = now - g_LastFrame;
-  if (el > 50) {
+  if (el > 20) {
     g_LastFrame = now;
   }
 
   //// Physics
-  phy_step();
-  
-  //// Logic
+  if (g_Bkg->moving == 0){
+	  phy_step();
 
-  // -> step all entities
-  for (int a = 0; a < (int)g_Entities.size(); a++) {
-    entity_step(g_Entities[a],el);
-  }
+	  //// Logic
 
-  //Background & border interaction with the player
-  if (entity_get_pos(g_Player)[0] >= c_ScreenW) { //Right
-	  if (nextRightBackground(g_Bkg) == true) {
-		  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+	  // -> step all entities
+	  for (int a = 0; a < (int)g_Entities.size(); a++) {
+		  entity_step(g_Entities[a], el);
 	  }
-	  else {
-		  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+
+	  //Background & border interaction with the player
+	  if (entity_get_pos(g_Player)[0] >= c_ScreenW) { //Right
+		  if (nextRightBackground(g_Bkg, g_LastFrame) == true) {
+			  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+		  }
+		  else {
+			  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+		  }
 	  }
-  }
-  else if (entity_get_pos(g_Player)[0] <= 0) { //Left
-	  if (nextLeftBackground(g_Bkg) == true) {
-		  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+	  else if (entity_get_pos(g_Player)[0] <= 0) { //Left
+		  if (nextLeftBackground(g_Bkg, g_LastFrame) == true) {
+			  entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+		  }
+		  else {
+			  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+		  }
 	  }
-	  else {
-		  entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+	  else if (entity_get_pos(g_Player)[1] <= 0) { //Down
+		  if (nextDownBackground(g_Bkg, g_LastFrame) == true) {
+			  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+		  }
+		  else {
+			  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+		  }
 	  }
-  }
-  else if (entity_get_pos(g_Player)[1] <= 0) { //Down
-	  if (nextDownBackground(g_Bkg) == true) {
-		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
-	  }
-	  else {
-		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
-	  }
-  }
-  else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Up
-	  if (nextUpBackground(g_Bkg) == true) {
-		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
-	  }
-	  else {
-		  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+	  else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Up
+		  if (nextUpBackground(g_Bkg, g_LastFrame) == true) {
+			  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+		  }
+		  else {
+			  entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+		  }
 	  }
   }
 
@@ -113,7 +115,7 @@ void mainRender()
 
   clearScreen();
   // -> draw background
-  background_draw(g_Bkg);
+  background_draw(g_Bkg, g_LastFrame, g_Player->body->GetPosition());
   // -> draw tilemap
   tilemap_draw(g_Tilemap);
   // -> draw all entities
@@ -121,7 +123,7 @@ void mainRender()
     entity_draw(g_Entities[a]);
   }
   // -> draw physics debug layer
-  // phy_debug_draw();
+  // phy_debug_draw();*/
 }
 
 // ------------------------------------------------------------------
@@ -151,7 +153,6 @@ int main(int argc,const char **argv)
 
     // create background
     g_Bkg = background_init(c_ScreenW, c_ScreenH);
-	loadBackground(g_Bkg);
 
     // load a tilemap
     g_Tilemap = tilemap_load("level.lua");
