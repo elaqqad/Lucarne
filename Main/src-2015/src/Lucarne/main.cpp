@@ -115,7 +115,7 @@ void mainRender()
 
   clearScreen();
   // -> draw background
-  background_draw(g_Bkg, g_LastFrame, g_Player->body->GetPosition());
+  background_draw(g_Bkg, g_LastFrame);
   // -> draw tilemap
   tilemap_draw(g_Tilemap);
   // -> draw all entities
