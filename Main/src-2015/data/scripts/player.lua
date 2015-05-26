@@ -5,8 +5,10 @@ physics_size_y    = 16
 physics_can_sleep = false
 physics_rotation  = false
 
-addanim('gripe.run_left.png',32)
-addanim('gripe.run_right.png',32)
+addanim('G_standstill-left.png',32)
+addanim('G_walk-left.png',32)
+addanim('G_standstill-right.png',32)
+addanim('G_walk-right.png',32)
 addanim('gripe.turn_left_to_right.png',32)
 addanim('gripe.turn_right_to_left.png',32)
 
@@ -28,7 +30,7 @@ function step()
 	  if state == 'wait_left' then 
 	    -- already in the correct orientation, just walk!
 	    state = 'walk_left'
-	    playanim('gripe.run_left.png',true)
+	    playanim('G_walk-left.png',true)
 	  else
 	    -- uho, need to turn left
 	    state = 'turn_left'
@@ -38,7 +40,7 @@ function step()
 	  if state == 'wait_right' then 
 	    -- already in the correct orientation, just walk!
 	    state = 'walk_right'
-	    playanim('gripe.run_right.png',true)
+	    playanim('G_walk-right.png',true)
 	  else
 	    -- uho, need to turn right
 	    state = 'turn_right'
@@ -75,10 +77,10 @@ end
 function onAnimEnd()
   if state == 'turn_left' then
     state = 'walk_left'
-	playanim('gripe.run_left.png',true)
+	playanim('G_walk-left.png',true)
   end
   if state == 'turn_right' then
     state = 'walk_right'
-	playanim('gripe.run_right.png',true)
+	playanim('G_walk-right.png',true)
   end
 end
