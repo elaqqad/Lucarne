@@ -29,6 +29,7 @@ typedef struct
 
 // ------------------------------------------------------------------
 
+void loadGround(v2i pos);
 Background *background_init(int w, int h);
 void        background_draw(Background*, time_t lastFrame);
 void background_draw(Background *bkg, v2i pos, v2i leftCorner);

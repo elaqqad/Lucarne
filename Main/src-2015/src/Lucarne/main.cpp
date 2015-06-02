@@ -123,14 +123,12 @@ void mainRender()
   clearScreen();
   // -> draw background
   background_draw(g_Bkg, g_LastFrame);
-  // -> draw tilemap
-  tilemap_draw(g_Tilemap);
   // -> draw all entities
   for (int a = 0; a < (int)g_Entities.size(); a++) {
     entity_draw(g_Entities[a]);
   }
   // -> draw physics debug layer
-  // phy_debug_draw();*/
+  phy_debug_draw();
 }
 
 // ------------------------------------------------------------------
@@ -161,14 +159,11 @@ int main(int argc,const char **argv)
     // create background
     g_Bkg = background_init(c_ScreenW, c_ScreenH);
 
-    // load a tilemap
-    g_Tilemap = tilemap_load("level.lua");
-
     // init physics
     phy_init();
 
     // bind tilemap to physics
-    tilemap_bind_to_physics(g_Tilemap);
+	loadGround(g_Bkg->pos);
 
     // load a simple entity
     {
@@ -185,7 +180,7 @@ int main(int argc,const char **argv)
 	  entity_set_pos(c, v2f(128, 32));
     } {
       Entity *c = entity_create("player", 0, "player.lua", v2i(0, 0));
-	  entity_set_pos(c, v2f(196, 128));
+	  entity_set_pos(c, v2f(196, 256));
       g_Player = c;
       g_Entities.push_back(c);
     }
