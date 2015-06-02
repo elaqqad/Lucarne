@@ -131,19 +131,19 @@ void lua_set_jump(float ix_foot, float iy_foot, float ix_left, float iy_left, fl
 	static t_time tmJump = milliseconds();
 	t_time now = milliseconds();
 	if (now - tmJump > 200) {
-		if ((g_Current->name == "player1"  && numLeftContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numLeftContacts2 > 0 && numFootContacts2 == 0))
+		if ((g_Current->name == "player"  && numLeftContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numLeftContacts2 > 0 && numFootContacts2 == 0))
 		{
 			lua_set_velocity_x(ix_left);
 			lua_set_velocity_y(iy_left);
 
 		}
-		else if ((g_Current->name == "player1" && numRightContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numRightContacts2 > 0 && numFootContacts2 == 0))
+		else if ((g_Current->name == "player" && numRightContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numRightContacts2 > 0 && numFootContacts2 == 0))
 		{
 			lua_set_velocity_x(ix_right);
 			lua_set_velocity_y(iy_right);
 		}
 
-		else if ((g_Current->name == "player1"  && numFootContacts1 > 0) || (g_Current->name == "player2" && numFootContacts2 > 0))
+		else if ((g_Current->name == "player"  && numFootContacts1 > 0) || (g_Current->name == "player2" && numFootContacts2 > 0))
 		{
 			lua_set_velocity_x(ix_foot);
 			lua_set_velocity_y(iy_foot);
@@ -154,17 +154,17 @@ void lua_set_jump(float ix_foot, float iy_foot, float ix_left, float iy_left, fl
 }
 
 void lua_set_walk(float ix_vel, float ix_jmp){
-	if ((g_Current->name == "player1" && numFootContacts1 > 0) || (g_Current->name == "player2" &&  numFootContacts2 > 0)){
+	if ((g_Current->name == "player" && numFootContacts1 > 0) || (g_Current->name == "player2" &&  numFootContacts2 > 0)){
 		lua_set_velocity_x(ix_vel);
 	}
 
-	else if ((g_Current->name == "player1" && (numRightContacts1 > 0 && ix_jmp >= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numRightContacts2 > 0 && ix_jmp >= 0) && numFootContacts2 == 0)){
+	else if ((g_Current->name == "player" && (numRightContacts1 > 0 && ix_jmp >= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numRightContacts2 > 0 && ix_jmp >= 0) && numFootContacts2 == 0)){
 		lua_set_velocity_x(0);
 		lua_set_velocity_y(-1);
 
 	}
 
-	else if ((g_Current->name == "player1" && (numLeftContacts1 > 0 && ix_jmp <= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numLeftContacts2 > 0 && ix_jmp <= 0) && numFootContacts2 == 0)){
+	else if ((g_Current->name == "player" && (numLeftContacts1 > 0 && ix_jmp <= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numLeftContacts2 > 0 && ix_jmp <= 0) && numFootContacts2 == 0)){
 		lua_set_velocity_x(0);
 		lua_set_velocity_y(-1);
 	}
@@ -269,6 +269,7 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	}
 	// load the script (global space gets executed)
 	g_Current = e;
+	script_load(e->script, sourcePath() + "/data/scripts/" + script);
 	g_Current = NULL;
 
 	// read physics properties
@@ -318,6 +319,7 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	// add the shape to the body.
 	e->body->CreateFixture(&fixtureDef);
 
+	if (e->name == "player"){
 
 		fixtureDef.density = 0.0f;
 		fixtureDef.friction = 0.0f;
