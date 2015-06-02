@@ -1,21 +1,21 @@
 physics_center_x  =  0
 physics_center_y  =  0
-physics_size_x    = 14
-physics_size_y    = 36
+physics_size_x    = 12
+physics_size_y    = 34
 physics_can_sleep = false
 physics_rotation  = false
 
 addanim('G_standstill-left.png',32)
 addanim('G_walk-left.png',32)
---addanim('G_jump-left.png',32)
+addanim('G_jump-left.png',32)
 addanim('G_standstill-right.png',32)
 addanim('G_walk-right.png',32)
---addanim('G_jump-right.png',32)
+addanim('G_jump-right.png',32)
 --Uncomment and update all of the animations related to turning when we have them
 addanim('gripe.turn_left_to_right.png',32)
 addanim('gripe.turn_right_to_left.png',32)
 
-playanim('G_standstill-left.png',true)
+playanim('G_standstill-left.png', true)
 stopanim()
 
 -- define a state variable which can be: 
@@ -65,11 +65,27 @@ function step()
   end
 
   if Key_z then
-    set_jump(0,4,1.5,3,-1.5,3)
-    if state == 'walk_left' or state == 'wait_left' then 
-     -- playanim('G_jump-left.png',false)
-    if state == 'walk_right' or state == 'wait_right' then
-     -- playanim('G_jump-right.png',false)
+    print(state)
+    if state == 'wait_left' then
+	  set_jump(0,4,1.5,3,-1.5,3)
+	  state = 'jump_left'
+      playanim('G_jump-left.png',false)
+	end
+    if state == 'wait_right' then
+	  set_jump(0,4,1.5,3,-1.5,3)
+	  state = 'jump_right'
+      playanim('G_jump-right.png',false)
+	end
+	if state == 'walk_left' then
+	  set_jump(-1.5, 3, 1.5, 3, -1.5, 3)
+	  state = 'jump_left'
+	  playanim('G_jump-left.png', false)
+	end
+	if state == 'walk_right' then
+	  set_jump(1.5, 3, 1.5, 3, -1.5, 3)
+	  state = 'jump_right'
+	  playanim('G_jump-right.png', false)
+	end
   end
   
   if Key_j then
@@ -77,9 +93,9 @@ function step()
   end
 
   -- walk if state is 'walk_*'
-  if state == 'walk_left' then
+  if state == 'walk_left' or state== 'jump_left' then
     set_walk(-1.2, -60)
-  elseif state == 'walk_right' then
+  elseif state == 'walk_right' or state== 'jump_right' then
     set_walk(1.2, 60)
   end
 
@@ -94,8 +110,16 @@ function onAnimEnd()
     state = 'walk_left'
 	playanim('G_walk-left.png',true)
   end
+  if state == 'jump_left' then
+    state = 'wait_left'
+	playanim('G_standstill-left.png', false)
+  end
   if state == 'turn_right' then
     state = 'walk_right'
 	playanim('G_walk-right.png',true)
+  end
+  if state == 'jump_right' then
+    state = 'wait_right'
+	playanim('G_standstill-right.png', false)
   end
 end

@@ -171,7 +171,6 @@ void lua_set_walk(float ix_vel, float ix_jmp){
 
 	else{
 		b2Vec2 vel = g_Current->body->GetLinearVelocity();
-		cout << vel.x << std::endl;
 		static t_time tmJump = milliseconds();
 		t_time now = milliseconds();
 		if (now - tmJump > 300) {
