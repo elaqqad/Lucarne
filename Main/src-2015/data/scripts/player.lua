@@ -1,14 +1,16 @@
 physics_center_x  =  0
 physics_center_y  =  0
-physics_size_x    = 16
+physics_size_x    = 14
 physics_size_y    = 36
 physics_can_sleep = false
 physics_rotation  = false
 
 addanim('G_standstill-left.png',32)
 addanim('G_walk-left.png',32)
+--addanim('G_jump-left.png',32)
 addanim('G_standstill-right.png',32)
 addanim('G_walk-right.png',32)
+--addanim('G_jump-right.png',32)
 --Uncomment and update all of the animations related to turning when we have them
 addanim('gripe.turn_left_to_right.png',32)
 addanim('gripe.turn_right_to_left.png',32)
@@ -64,6 +66,10 @@ function step()
 
   if Key_z then
     set_jump(0,4,1.5,3,-1.5,3)
+    if state == 'walk_left' or state == 'wait_left' then 
+     -- playanim('G_jump-left.png',false)
+    if state == 'walk_right' or state == 'wait_right' then
+     -- playanim('G_jump-right.png',false)
   end
   
   if Key_j then
