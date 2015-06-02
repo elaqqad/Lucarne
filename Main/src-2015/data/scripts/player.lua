@@ -30,7 +30,7 @@ function step()
   -- update state
   if state == 'wait_left' or state == 'wait_right' then
     if Key_q then
-	  if state == 'wait_left' then 
+	  if state == 'wait_left'then 
 	    -- already in the correct orientation, just walk!
 	    state = 'walk_left'
 	    playanim('G_walk-left.png',true)
@@ -67,22 +67,22 @@ function step()
   if Key_z then
     print(state)
     if state == 'wait_left' then
-	  set_jump(0,4,1.5,3,-1.5,3)
+	  set_jump(0, 5, 1.5, 3, -1.5, 3)
 	  state = 'jump_left'
       playanim('G_jump-left.png',false)
 	end
     if state == 'wait_right' then
-	  set_jump(0,4,1.5,3,-1.5,3)
+	  set_jump(0, 5, 1.5, 3, -1.5, 3)
 	  state = 'jump_right'
       playanim('G_jump-right.png',false)
 	end
 	if state == 'walk_left' then
-	  set_jump(-1.5, 3, 1.5, 3, -1.5, 3)
+	  set_jump(-1.5, 4, 1.5, 3, -1.5, 3)
 	  state = 'jump_left'
 	  playanim('G_jump-left.png', false)
 	end
 	if state == 'walk_right' then
-	  set_jump(1.5, 3, 1.5, 3, -1.5, 3)
+	  set_jump(1.5, 4, 1.5, 3, -1.5, 3)
 	  state = 'jump_right'
 	  playanim('G_jump-right.png', false)
 	end
@@ -93,9 +93,9 @@ function step()
   end
 
   -- walk if state is 'walk_*'
-  if state == 'walk_left' or state== 'jump_left' then
+  if state == 'walk_left' then
     set_walk(-1.2, -60)
-  elseif state == 'walk_right' or state== 'jump_right' then
+  elseif state == 'walk_right' then
     set_walk(1.2, 60)
   end
 
