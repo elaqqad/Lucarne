@@ -31,6 +31,13 @@ Background     *g_Bkg          = NULL;
 vector<Entity*> g_Entities;
 Entity*         g_Player       = NULL;
 
+int             numFootContacts1 = 0;
+int             numLeftContacts1 = 0;
+int             numRightContacts1 = 0;
+int             numFootContacts2 = 0;
+int             numLeftContacts2 = 0;
+int             numRightContacts2 = 0;
+
 // ------------------------------------------------------------------
 
 // 'mainKeyPressed' is called everytime a key is pressed
@@ -39,8 +46,8 @@ void mainKeyPressed(uchar key)
   g_Keys[key] = true;
 
   if (key == ' ') {
-    Entity *c = entity_create("coin0", "coin.lua");
-    entity_set_pos(c, v2f(256 + ((rand() % 128) - 64), 350));
+	  Entity *c = entity_create("coin0", 1, "coin.lua", v2i(0, 0));
+	  entity_set_pos(c, v2f(256 + ((rand() % 128) - 64), 350));
     g_Entities.push_back(c);
   }
 }
@@ -165,20 +172,20 @@ int main(int argc,const char **argv)
 
     // load a simple entity
     {
-      Entity *c = entity_create("coin0", "coin.lua");
-      entity_set_pos(c, v2f(32, 32));
+      Entity *c = entity_create("coin0", 0, "coin.lua", v2i(0, 0));
       g_Entities.push_back(c);
+	  entity_set_pos(c, v2f(32, 32));
     } {
-      Entity *c = entity_create("coin1", "coin.lua");
-      entity_set_pos(c, v2f(96, 32));
+      Entity *c = entity_create("coin1", 0, "coin.lua", v2i(0, 0));
       g_Entities.push_back(c);
+	  entity_set_pos(c, v2f(96, 32));
     } {
-      Entity *c = entity_create("coin2", "coin.lua");
-      entity_set_pos(c, v2f(128, 32));
+      Entity *c = entity_create("coin2", 0, "coin.lua", v2i(0, 0));
       g_Entities.push_back(c);
+	  entity_set_pos(c, v2f(128, 32));
     } {
-      Entity *c = entity_create("player", "player.lua");
-      entity_set_pos(c, v2f(196,64));
+      Entity *c = entity_create("player", 0, "player.lua", v2i(0, 0));
+	  entity_set_pos(c, v2f(196, 128));
       g_Player = c;
       g_Entities.push_back(c);
     }

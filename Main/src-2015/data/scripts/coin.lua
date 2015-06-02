@@ -14,11 +14,11 @@ end
 
 function contact(with)
   -- print('coin contact with ' .. with)
-  if with == 'player' then
-    killed = true
+  if with == 1 and killer == 0 then
+    killingContact = true
   end  
 end
 
 function onAnimEnd()
-  playanim('spinning_coin_gold.png',false)
+playanim('spinning_coin_gold.png',false)
 end

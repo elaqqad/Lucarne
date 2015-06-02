@@ -138,39 +138,41 @@ Tilemap *tilemap_load(string fname)
 
 void tilemap_bind_to_physics(Tilemap *tmap)
 {
-  // define the dynamic body for the entire tilemap
-  b2BodyDef bodyDef;
-  bodyDef.type = b2_staticBody;
-  bodyDef.position.Set(0.0f, 0.0f);
-  b2Body *body = g_World->CreateBody(&bodyDef);
+	// define the dynamic body for the entire tilemap
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_staticBody;
+	bodyDef.position.Set(0.0f, 0.0f);
+	b2Body *body = g_World->CreateBody(&bodyDef);
 
-  ForImage(tmap->tilemap, i, j) {
-    v3b pix = v3b(tmap->tilemap->pixel(i, j));
-    Tile *tile = tmap->tiles[pix];
-    if (tile) {
-      // define a box shape.
-      b2PolygonShape box;
-      box.SetAsBox(
-        tile->w / 2, tile->h / 2,  // size
-        b2Vec2(i*tmap->tilew + tile->w / 2, j*tmap->tileh + tile->h / 2), // center
-        0.0f);
-      // define the dynamic body fixture.
-      b2FixtureDef fixtureDef;
-      fixtureDef.shape = &box;
-      // set the box density to be zero, so it will be static.
-      fixtureDef.density = 0.0f;
-      // override the default friction.
-      fixtureDef.friction = 0.5f;
-      // how bouncy?
-      fixtureDef.restitution = 0.3f;
-      // user data; set to NULL to distinguish from entities
-      fixtureDef.userData = (void*)NULL;
-      // add the shape to the body.
-      body->CreateFixture(&fixtureDef);
-    }
-  }
+	ForImage(tmap->tilemap, i, j) {
+		v3b pix = v3b(tmap->tilemap->pixel(i, j));
+		Tile *tile = tmap->tiles[pix];
+		if (tile) {
+			// define a box shape.
+			b2PolygonShape box;
+			box.SetAsBox(
+				in_meters(tile->w / 2), in_meters(tile->h / 2),  // size
+				b2Vec2(in_meters(i*tmap->tilew + tile->w / 2), in_meters(j*tmap->tileh + tile->h / 2)), // center
+				0.0f);
+			// define the dynamic body fixture.
+			b2FixtureDef fixtureDef;
+			fixtureDef.shape = &box;
+			// set the box density to be zero, so it will be static.
+			fixtureDef.density = 1.0f;
+			// override the default friction.
+			fixtureDef.friction = 0.6f;
+			// how bouncy?
+			fixtureDef.restitution = 0.1f;
+			// user data; set to NULL to distinguish from entities
+			fixtureDef.userData = (void*)NULL;
+			// add the shape to the body.
+			body->CreateFixture(&fixtureDef);
+
+		}
+	}
 
 }
+
 
 // ------------------------------------------------------------------
 
