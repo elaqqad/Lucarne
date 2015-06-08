@@ -50,16 +50,18 @@ void mainKeyPressed(uchar key)
 		g_GameState = ShowingMenu;
 	}
 	else if (g_GameState == ShowingMenu){
-		std::cerr << Console::red << (int)key << Console::gray << std::endl;
-		if (key == (int) 'p'){
+		if (key == 'p'){
 			g_GameState = Playing;
 		}
-		else if (key == (char)'e'){
+		else if (key == 'e'){
 			SimpleUI::shutdown();
 			exit(0);
 		}
 	}
 	else{
+		if (key == LIBSL_KEY_ESC){
+			g_GameState = End;
+		}
 		g_Keys[key] = true;
 
 		if (key == ' ') {
@@ -168,7 +170,10 @@ void mainRender()
 		phy_debug_draw();
 	}
 	else if (g_GameState == End){
-		// print Game over!
+		clearScreen();
+		string src = sourcePath() + "/data/General/GameOver.png";
+		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
+		imag->draw(0, 0);
 	}
 	return;
 
