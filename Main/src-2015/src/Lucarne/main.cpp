@@ -12,6 +12,7 @@ LIBSL_WIN32_FIX;
 #include "entity.h"
 #include "background.h"
 #include "physics.h"
+#include "Sound.h"
 
 // ------------------------------------------------------------------
 
@@ -41,6 +42,8 @@ int             numFootContacts2 = 0;
 int             numLeftContacts2 = 0;
 int             numRightContacts2 = 0;
 
+bool music_playing = false;
+
 // ------------------------------------------------------------------
 
 // 'mainKeyPressed' is called everytime a key is pressed
@@ -52,6 +55,7 @@ void mainKeyPressed(uchar key)
 	else if (g_GameState == ShowingMenu){
 		if (key == 'p'){
 			g_GameState = Playing;
+			play_sound("theme.wav");
 		}
 		else if (key == 'e'){
 			SimpleUI::shutdown();
@@ -102,8 +106,13 @@ void mainRender()
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
-
 	else if (g_GameState == Playing){
+
+		// music
+		/*if (!music_playing){
+			play_sound("theme.wav");
+			music_playing = true;
+		}*/
 		//// Compute elapsed time
 		time_t now = milliseconds();
 		time_t el = now - g_LastFrame;
@@ -125,7 +134,7 @@ void mainRender()
 			//Background & border interaction with the player
 			if (entity_get_pos(g_Player)[0] >= c_ScreenW) { //Right
 				if (nextRightBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+					entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]+3));
 				}
 				else {
 					entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
@@ -133,7 +142,7 @@ void mainRender()
 			}
 			else if (entity_get_pos(g_Player)[0] <= 0) { //Left
 				if (nextLeftBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+					entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]+3));
 				}
 				else {
 					entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
@@ -233,7 +242,8 @@ int main(int argc, const char **argv)
 			g_Player = c;
 			g_Entities.push_back(c);
 		}
-
+		init_sound();
+		//std::cerr << sourcePath();
 		g_LastFrame = milliseconds();
 
 		// enter the main loop

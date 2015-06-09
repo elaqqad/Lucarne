@@ -310,7 +310,7 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	fixtureDef.friction = 0.6f;
 
 	// how bouncy?
-	fixtureDef.restitution = 0.01f;
+	fixtureDef.restitution = 0.0f;
 
 	// user data (pointer to entity being created)
 	fixtureDef.userData = (void*)(e);

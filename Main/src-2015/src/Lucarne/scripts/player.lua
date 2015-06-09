@@ -59,13 +59,17 @@ function step()
     set_impulse(0.0,2.0)
   end
 
+  if Key_z then
+	pos_y +=2
+  end
+
   -- walk if state is 'walk_*'
   if state == 'walk_left' then
-    set_velocity_x(-100.0)
-	--set_velocity_y(100.0)
+    set_velocity_x(-200.0)
+	set_velocity_y(1000.0)
   elseif state == 'walk_right' then
-    set_velocity_x(100.0)
-	--set_velocity_y(100.0)
+    set_velocity_x(200.0)
+	set_velocity_y(1000.0)
   end
 
 end
