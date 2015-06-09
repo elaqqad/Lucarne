@@ -14,6 +14,9 @@ LIBSL_WIN32_FIX;
 #include "physics.h"
 #include "Sound.h"
 
+#include <time.h>
+
+
 // ------------------------------------------------------------------
 
 // Constants
@@ -55,7 +58,12 @@ void mainKeyPressed(uchar key)
 	else if (g_GameState == ShowingMenu){
 		if (key == 'p'){
 			g_GameState = Playing;
-			play_sound("theme.wav");
+			int i = rand() % 4 + 1;
+			stringstream ss;
+			ss << "theme" << i << ".wav";
+			string s = ss.str();
+			std::cerr << s;
+			play_sound(s);
 		}
 		else if (key == 'e'){
 			SimpleUI::shutdown();
@@ -212,6 +220,9 @@ int main(int argc, const char **argv)
 			g_Keys[i] = false;
 		}
 
+		//init random seed
+		srand(time(NULL));
+
 		///// Level creation
 
 		// create background
@@ -238,7 +249,7 @@ int main(int argc, const char **argv)
 			entity_set_pos(c, v2f(128, 32));
 		} {
 			Entity *c = entity_create("player", 0, "player.lua", v2i(0, 0));
-			entity_set_pos(c, v2f(300, 400));
+			entity_set_pos(c, v2f(300, 200));
 			g_Player = c;
 			g_Entities.push_back(c);
 		}
