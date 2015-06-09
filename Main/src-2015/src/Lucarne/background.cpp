@@ -71,7 +71,7 @@ void loadGround(v2i pos) {
 	vector<int> ctry = vector<int>();
 	fstream file;
 	string currentLine;
-	file.open(sourcePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_2_sol.txt", fstream::in);
+	file.open(sourcePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_0_sol.txt", fstream::in);
 
 	getline(file, currentLine);
 	length = stof(currentLine);

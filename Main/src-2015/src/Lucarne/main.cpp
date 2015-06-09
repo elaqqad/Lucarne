@@ -167,7 +167,7 @@ void mainRender()
 			entity_draw(g_Entities[a]);
 		}
 		// -> draw physics debug layer
-		phy_debug_draw();
+		//phy_debug_draw();
 	}
 	else if (g_GameState == End){
 		clearScreen();
@@ -229,7 +229,7 @@ int main(int argc, const char **argv)
 			entity_set_pos(c, v2f(128, 32));
 		} {
 			Entity *c = entity_create("player", 0, "player.lua", v2i(0, 0));
-			entity_set_pos(c, v2f(196, 256));
+			entity_set_pos(c, v2f(300, 400));
 			g_Player = c;
 			g_Entities.push_back(c);
 		}
