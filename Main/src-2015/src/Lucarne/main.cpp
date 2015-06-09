@@ -77,7 +77,7 @@ void mainKeyPressed(uchar key)
 		g_Keys[key] = true;
 
 		if (key == ' ') {
-			Entity *c = entity_create("coin0", 1, "coin.lua", v2i(0, 0));
+			Entity *c = entity_create("coin0", "coin.lua", v2i(0, 0));
 			entity_set_pos(c, v2f(256 + ((rand() % 128) - 64), 350));
 			g_Entities.push_back(c);
 		}
@@ -104,13 +104,13 @@ void mainRender()
 	}
 	else if (g_GameState == ShowingSplash){
 		clearScreen();
-		string src = sourcePath() + "/data/General/SplashScreen.png";
+		string src = executablePath() + "/data/General/SplashScreen.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
 	else if (g_GameState == ShowingMenu){
 		clearScreen();
-		string src = sourcePath() + "/data/General/Mainmenu.png";
+		string src = executablePath() + "/data/General/Mainmenu.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
@@ -188,7 +188,7 @@ void mainRender()
 	}
 	else if (g_GameState == End){
 		clearScreen();
-		string src = sourcePath() + "/data/General/GameOver.png";
+		string src = executablePath()+ "/data/General/GameOver.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
@@ -234,22 +234,26 @@ int main(int argc, const char **argv)
 		// bind tilemap to physics
 		loadGround(g_Bkg->pos);
 
+		
 		// load a simple entity
+		for (int i = 0; i <= 10; i++)
 		{
-			Entity *c = entity_create("coin0", 0, "coin.lua", v2i(0, 0));
+			Entity *c = entity_create("coin"+char(i),"coin.lua", v2i(0, 0));
 			g_Entities.push_back(c);
+
 			entity_set_pos(c, v2f(32, 32));
 		} {
-			Entity *c = entity_create("coin1", 0, "coin.lua", v2i(0, 0));
+			Entity *c = entity_create("coin1", "coin.lua", v2i(0, 0));
 			g_Entities.push_back(c);
 			entity_set_pos(c, v2f(96, 32));
 		} {
-			Entity *c = entity_create("coin2", 0, "coin.lua", v2i(0, 0));
+			Entity *c = entity_create("coin2", "coin.lua", v2i(0, 0));
 			g_Entities.push_back(c);
 			entity_set_pos(c, v2f(128, 32));
 		} {
-			Entity *c = entity_create("player", 0, "player.lua", v2i(0, 0));
+			Entity *c = entity_create("player", "player.lua", v2i(0, 0));
 			entity_set_pos(c, v2f(300, 200));
+
 			g_Player = c;
 			g_Entities.push_back(c);
 		}
