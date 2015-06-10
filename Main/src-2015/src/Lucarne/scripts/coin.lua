@@ -15,7 +15,7 @@ end
 function contact(with)
   -- print('coin contact with ' .. with)
   if with == 'player' then
-    killed = true
+    killed=true
   end  
 end
 

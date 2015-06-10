@@ -32,7 +32,7 @@ void loadBackground(Background *bkg, v2i pos) {
 	bool failed = false;
 	DrawImage* puzzle[3];
 	for (int i = 0; i < 3; i++) {
-		string name = sourcePath() + "/data/screens/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_" + to_string(i) + ".png";
+		string name = executablePath() + "/data/screens/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_" + to_string(i) + ".png";
 		if (LibSL::System::File::exists(name.c_str())) {
 			puzzle[i] = new DrawImage(name.c_str(), v3b(255, 0, 255));
 		}
@@ -71,7 +71,7 @@ void loadGround(v2i pos) {
 	vector<int> ctry = vector<int>();
 	fstream file;
 	string currentLine;
-	file.open(sourcePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_2_sol.txt", fstream::in);
+	file.open(executablePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_2_sol.txt", fstream::in);
 
 	getline(file, currentLine);
 	length = stof(currentLine);

@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0468239E06E34EE2B6B3CA3269F5CA9B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_04EC836884D94B6190B11C430C49D208"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -123,6 +129,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2EE4A55D0CC24902AFFFBF2D2F98D749"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2FED0122AE1D42DC84A72AFA1CBFE279"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -130,6 +142,12 @@
         "Entry"
         {
         "MsmKey" = "8:_30076E02BF4046E582B1DDE833D8C069"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_30682BBC6E4D4E118660690536CB2C69"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -195,12 +213,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_56F9DBD3EE3743C59B5A863416D43217"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_5733498068454FAAB74BC843AB24D9BD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -226,6 +238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6641D2C2B6834DD8B9E9A868AF561156"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_69C5ECE12B0148EA94FAD3C628B11503"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -471,7 +489,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\installer.msi"
+        "OutputFilename" = "8:Release\\installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -495,6 +513,11 @@
                     "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.5"
                     }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.12.0.x64"
+                    {
+                    "Name" = "8:Visual C++ 2013 Runtime Libraries (x64)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.12.0.x64"
+                    }
                 }
             }
         }
@@ -507,7 +530,7 @@
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -550,6 +573,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0468239E06E34EE2B6B3CA3269F5CA9B"
+            {
+            "SourcePath" = "8:..\\data\\General\\Mainmenu.png"
+            "TargetName" = "8:Mainmenu.png"
+            "Tag" = "8:"
+            "Folder" = "8:_FEFAFF02CCB74709863BF0EAD383CCA4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_04EC836884D94B6190B11C430C49D208"
             {
             "SourcePath" = "8:..\\data\\screens\\0_0_2.png"
@@ -910,6 +953,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2EE4A55D0CC24902AFFFBF2D2F98D749"
+            {
+            "SourcePath" = "8:..\\data\\General\\SplashScreen.png"
+            "TargetName" = "8:SplashScreen.png"
+            "Tag" = "8:"
+            "Folder" = "8:_FEFAFF02CCB74709863BF0EAD383CCA4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2FED0122AE1D42DC84A72AFA1CBFE279"
             {
             "SourcePath" = "8:..\\data\\sprites\\G_walk-left.png"
@@ -936,6 +999,26 @@
             "TargetName" = "8:ennemy.lua"
             "Tag" = "8:"
             "Folder" = "8:_C3A225E2FFE540138BDC1CEA17B7F0D8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_30682BBC6E4D4E118660690536CB2C69"
+            {
+            "SourcePath" = "8:..\\data\\General\\GameOver.png"
+            "TargetName" = "8:GameOver.png"
+            "Tag" = "8:"
+            "Folder" = "8:_FEFAFF02CCB74709863BF0EAD383CCA4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2167,6 +2250,17 @@
                                     }
                                 }
                             }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_FEFAFF02CCB74709863BF0EAD383CCA4"
+                            {
+                            "Name" = "8:General"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_469844B1769349669AE43A2A0861482D"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -2210,7 +2304,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Lucarne"
         "ProductCode" = "8:{E25A5844-8840-4946-975E-01F4741570F3}"
-        "PackageCode" = "8:{635B2A5C-9918-4FD3-A79F-25011325F439}"
+        "PackageCode" = "8:{784293E2-CDB3-479B-8A66-4152D16A4C0F}"
         "UpgradeCode" = "8:{DA34B0C9-84B5-4C53-AC5A-7651A7CC6007}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -2330,6 +2424,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8A6BF17E6ACA41F88FE2DB9DAA946F1A"
+            {
+            "Name" = "8:Shortcut to Primary Output from Lucarne (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_69C5ECE12B0148EA94FAD3C628B11503"
+            "Folder" = "8:_9843AAE9604B492293960E85611DCCD0"
+            "WorkingFolder" = "8:_929F2E2CA1754193B38FC09E0E2034D2"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D5DF625EC806460B8A2505D2ED6CD61D"
+            {
+            "Name" = "8:Shortcut to Primary Output from Lucarne (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_69C5ECE12B0148EA94FAD3C628B11503"
+            "Folder" = "8:_B1318CB63BA74E5EB808EDE384EACFA8"
+            "WorkingFolder" = "8:_929F2E2CA1754193B38FC09E0E2034D2"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
@@ -2743,7 +2865,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_56F9DBD3EE3743C59B5A863416D43217"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_69C5ECE12B0148EA94FAD3C628B11503"
             {
             "SourcePath" = "8:..\\..\\BUILD\\src\\Lucarne\\Debug\\Lucarne.exe"
             "TargetName" = "8:"
@@ -2765,7 +2887,7 @@
             "ProjectOutputGroupRegister" = "3:1"
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{68B1827A-6810-4C3F-B525-1C539BCA187F}"
+            "OutputProjectGuid" = "8:{1EF0CDFA-2710-4853-B6F3-9F6BA8668FC3}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {

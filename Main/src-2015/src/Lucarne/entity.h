@@ -41,10 +41,7 @@ typedef struct
 	bool                     animIsALoop;
 
 	// v2f                      pos; ==> this is now in the physics body
-	bool                     killingContact;
-	int                      killer;
-	int                      life;
-	int                      score;
+	bool                     killed;
 	v2f                      initialCoordinates;
 	v2i                      pos;
 
@@ -60,8 +57,9 @@ typedef struct
 
 // ------------------------------------------------------------------
 
-Entity *entity_create(string fname, int killer, string script, v2i pos);
+Entity *entity_create(string fname, string script, v2i pos);
 void    entity_draw(Entity *e);
+void    entity_test(Entity *e);
 void    entity_step(Entity *e, time_t elapsed);
 void    entity_contact(Entity *e, Entity *with);
 AAB<2>  entity_bbox(Entity *e);
