@@ -12,7 +12,7 @@ LIBSL_WIN32_FIX;
 #include "entity.h"
 #include "background.h"
 #include "physics.h"
-#include "Sound.h"
+//#include "Sound.h"
 
 #include <time.h>
 
@@ -63,7 +63,7 @@ void mainKeyPressed(uchar key)
 			ss << "theme" << i << ".wav";
 			string s = ss.str();
 			std::cerr << s;
-			play_sound(s);
+			//play_sound(s);
 		}
 		else if (key == 'e'){
 			SimpleUI::shutdown();
@@ -257,8 +257,8 @@ int main(int argc, const char **argv)
 			g_Player = c;
 			g_Entities.push_back(c);
 		}
-		init_sound();
-		//std::cerr << sourcePath();
+		//init_sound();
+		//std::cerr << executablePath();
 		g_LastFrame = milliseconds();
 
 		// enter the main loop

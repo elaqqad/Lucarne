@@ -72,7 +72,7 @@ void loadGround(v2i pos) {
 	fstream file;
 	string currentLine;
 
-	file.open(sourcePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_0_sol.txt", fstream::in);
+	file.open(executablePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_0_sol.txt", fstream::in);
 
 
 	getline(file, currentLine);

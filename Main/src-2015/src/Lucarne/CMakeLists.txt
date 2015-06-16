@@ -13,8 +13,6 @@ ADD_EXECUTABLE(Lucarne
   background.h
   physics.cpp
   physics.h
-  Sound.cpp
-  Sound.h
   ./scripts/coin.lua
   ./scripts/player.lua
   ./scripts/ennemy.lua
