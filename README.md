@@ -1,9 +1,9 @@
-﻿# ** Welcome to Lucarne ** 
+#Welcome to Lucarne
 
 Lucarne is a plateform game, developed by twelve students from an engineering school (Mines Nancy) and an art school (ENSA Nancy).
 
 
- # ** Getting Started **
+##Getting Started
  
 To work on the project, you need:
  - CMake
@@ -17,8 +17,8 @@ To work on the project, you need:
  You should now have a fully functional version of Lucarne
  
  
- # ** Testing sprites with this project**
+##Testing sprites with this project
  
- 1 - All content should be added to src-2015\data
- 2 - Scripts should be placed in src-2015\data\scripts
- 3 - To launch the game, go to BUILD\src-2015
+ - All content should be added to src-2015\data
+ - Scripts should be placed in src-2015\data\scripts
+ - To launch the game, go to BUILD\src-2015
