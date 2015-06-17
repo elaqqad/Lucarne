@@ -1,13 +1,11 @@
-﻿# ** Welcome to the game Lucarne? ** 
+﻿# ** Welcome to Lucarne ** 
 
-Lucarne is plateform game, developed by twelve students from Nancy from an engineering school (Mines Nancy) and an art schol (ENSA Nancy).
+Lucarne is a plateform game, developed by twelve students from an engineering school (Mines Nancy) and an art school (ENSA Nancy).
 
 
-
- 
  # ** Getting Started **
  
- TO get started you need to install : 
+To work on the project, you need:
  - CMake
  - Python 3 or above
  - Visual Studio 2013 or above
@@ -19,13 +17,8 @@ Lucarne is plateform game, developed by twelve students from Nancy from an engin
  You should now have a fully functional version of Lucarne
  
  
- # ** Testing sprites with this projects **
+ # ** Testing sprites with this project**
  
  1 - All content should be added to src-2015\data
- 2 - Sprite may then be references in src-2015\data\scripts
- 3 - To launch the game, go to BUILD\src\spriteanim\Debug
- 
- Push the space bar to reload your scripts/sprites
- 
- 
-
+ 2 - Scripts should be placed in src-2015\data\scripts
+ 3 - To launch the game, go to BUILD\src-2015
