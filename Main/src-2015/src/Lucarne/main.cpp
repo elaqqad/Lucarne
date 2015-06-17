@@ -161,7 +161,7 @@ void mainRender()
 
 		clearScreen();
 		// -> draw background
-		background_draw(g_Bkg, g_LastFrame);
+		background_draw(g_Bkg, g_LastFrame, v2i(entity_get_pos(g_Player)));
 		// -> draw all entities
 		for (int a = 0; a < (int)g_Entities.size(); a++) {
 			entity_draw(g_Entities[a]);

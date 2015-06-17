@@ -24,6 +24,9 @@ public:
   // draw the image on screen at pixel position x,y
   void draw(int x,int y);
 
+  // draw the image on screen at pixel position x,y with a mask
+  void drawMasked(int x, int y, Tex2DRGBA_Ptr mask, bool negative, v2i maskpos);
+
   // draw a subpart of the image on screen at pixel position x,y
   void drawSub(v2i screen_pos,v2i screen_size,v2i table_pos,v2i table_size);
 

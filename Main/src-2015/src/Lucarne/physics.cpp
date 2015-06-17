@@ -60,31 +60,6 @@ public:
 		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
 			numRightContacts1++;
 
-		//check if player2 touch the floor
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 5)
-			numFootContacts2++;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 5)
-			numFootContacts2++;
-
-		//check if player2 touch by the left
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 6)
-			numLeftContacts2++;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 6)
-			numLeftContacts2++;
-
-		//check if player2 touch by the right
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 8)
-			numRightContacts2++;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 8)
-			numRightContacts2++;
-
-
 	}
 
 	void EndContact(b2Contact* contact)    {
@@ -113,32 +88,6 @@ public:
 		fixtureUserData = contact->GetFixtureB()->GetUserData();
 		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
 			numRightContacts1--;
-
-		//check if player2 touch the floor
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 5)
-			numFootContacts2--;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 5)
-			numFootContacts2--;
-
-		//check if player2 touch by the left
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 6)
-			numLeftContacts2--;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 6)
-			numLeftContacts2--;
-
-		//check if player2 touch by the right
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 8)
-			numRightContacts2--;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 8)
-			numRightContacts2--;
-
-
 
 	}
 	void PreSolve(b2Contact* contact, const b2Manifold* oldManifold)

@@ -10,29 +10,36 @@
 extern b2World *g_World;
 b2Body *currentBody = NULL;
 
+RenderTarget2DRGBA_Ptr g_Rt;
+
 // ------------------------------------------------------------------
 
 float ANIMATION_TIME = 3000.0f;
 
 Background *background_init(int screenw,int screenh)
 {
+	g_Rt = RenderTarget2DRGBA_Ptr(new RenderTarget2DRGBA(screenw, screenh));
   Background *bkg = new Background;
   bkg->pos = v2i(0, 0);
   bkg->screenw = screenw;
   bkg->screenh = screenh;
   bkg->moving = 0;
-  loadBackground(bkg, bkg->pos);
+  loadBackground(bkg, bkg->pos, 0); // load first world bkg
+  loadBackground(bkg, bkg->pos, 1); // load second world bkg
+  ImageRGBA_Ptr img( loadImage<ImageRGB>((sourcePath() + "/data/screens/mask.png").c_str())->cast<ImageRGBA>() );
+  bkg->mask = Tex2DRGBA_Ptr( new Tex2DRGBA(img->pixels()) );
   return bkg;
 }
 
-void loadBackground(Background *bkg, v2i pos) {
-	if (bkg->screens.find(pos) != bkg->screens.end()) {
+void loadBackground(Background *bkg, v2i pos, int world) {
+	if (bkg->screens.find(v3i(pos,world)) != bkg->screens.end()) {
 		return;
 	}
 	bool failed = false;
 	DrawImage* puzzle[3];
 	for (int i = 0; i < 3; i++) {
-		string name = sourcePath() + "/data/screens/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_" + to_string(i) + ".png";
+		string postfix = world == 0 ? "" : "_b";
+		string name = sourcePath() + "/data/screens/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_" + to_string(i) + postfix + ".png";
 		if (LibSL::System::File::exists(name.c_str())) {
 			puzzle[i] = new DrawImage(name.c_str(), v3b(255, 0, 255));
 		}
@@ -41,14 +48,14 @@ void loadBackground(Background *bkg, v2i pos) {
 		}
 	}
 	if (!failed) {
-		bkg->screens[pos] = vector<DrawImage*>();
-		bkg->screens[pos].push_back(puzzle[0]);
-		bkg->screens[pos].push_back(puzzle[1]);
-		bkg->screens[pos].push_back(puzzle[2]);
-		loadBackground(bkg, pos + v2i(1, 0));
-		loadBackground(bkg, pos + v2i(-1, 0));
-		loadBackground(bkg, pos + v2i(0, 1));
-		loadBackground(bkg, pos + v2i(0, -1));
+		bkg->screens[v3i(pos, world)] = vector<DrawImage*>();
+		bkg->screens[v3i(pos, world)].push_back(puzzle[0]);
+		bkg->screens[v3i(pos, world)].push_back(puzzle[1]);
+		bkg->screens[v3i(pos, world)].push_back(puzzle[2]);
+		loadBackground(bkg, pos + v2i(1, 0), world);
+		loadBackground(bkg, pos + v2i(-1, 0), world);
+		loadBackground(bkg, pos + v2i(0, 1), world);
+		loadBackground(bkg, pos + v2i(0, -1), world);
 	}
 }
 
@@ -114,51 +121,88 @@ void loadGround(v2i pos) {
 
 // ------------------------------------------------------------------
 
-void background_draw(Background *bkg, time_t lastFrame)
+void background_draw(Background *bkg, time_t lastFrame, v2i playerpos)
+{
+
+	glPushAttrib(GL_ENABLE_BIT);
+	g_Rt->clear();
+	g_Rt->bind();
+	glViewport(0, 0, g_Rt->w(), g_Rt->h());
+	// draw second world
+	background_draw(bkg,lastFrame, 1, true, playerpos );
+	////////////////////
+	g_Rt->unbind();
+
+	// draw first world
+	background_draw(bkg, lastFrame, 0, false, playerpos);
+	////////////////////
+
+	// composite both
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_ONE, GL_ONE);
+	Transform::ortho2D(LIBSL_PROJECTION_MATRIX, 0, 1, 0, 1);
+	Transform::identity(LIBSL_MODELVIEW_MATRIX);
+	glColor3f(1, 1, 1);
+	glEnable(GL_TEXTURE_2D);
+	glBindTexture(GL_TEXTURE_2D,g_Rt->texture());
+	glBegin(GL_QUADS);
+	glTexCoord2i(0, 0); glVertex2i(0, 0);
+	glTexCoord2i(1, 0); glVertex2i(1, 0);
+	glTexCoord2i(1, 1); glVertex2i(1, 1);
+	glTexCoord2i(0, 1); glVertex2i(0, 1);
+	glEnd();
+	glPopAttrib();
+}
+
+// ------------------------------------------------------------------
+
+void background_draw(Background *bkg, time_t lastFrame,int world,bool negative, v2i maskpos)
 {
 	if (bkg->moving == 0) {
-		background_draw(bkg, bkg->pos, v2i(0, 0));
+		background_draw(bkg, v3i(bkg->pos, world), v2i(0, 0), negative, maskpos);
 	}
 	else if (bkg->moving == 1) {// 1=Right
-		background_draw(bkg, bkg->oldPos, v2i(-(lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME, 0));
-		background_draw(bkg, bkg->pos, v2i((bkg->screenw - (lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME), 0));
+		background_draw(bkg, v3i(bkg->oldPos,world), v2i(-(lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME, 0), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i((bkg->screenw - (lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME), 0), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
 	}
 	else if (bkg->moving == 2) {//2=Left
-		background_draw(bkg, bkg->oldPos, v2i((lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME, 0));
-		background_draw(bkg, bkg->pos, v2i(-(bkg->screenw - (lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME), 0));
+		background_draw(bkg, v3i(bkg->oldPos, world), v2i((lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME, 0), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i(-(bkg->screenw - (lastFrame - bkg->startTime) * bkg->screenw / ANIMATION_TIME), 0), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
 	}
 	else if (bkg->moving == 3) {//3=Up
-		background_draw(bkg, bkg->oldPos, v2i(0, (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME));
-		background_draw(bkg, bkg->pos, v2i(0, -(bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)));
+		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i(0, -(bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
 	}
 	else if (bkg->moving == 4) {//4=Down
-		background_draw(bkg, bkg->oldPos, v2i(0, -(lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME));
-		background_draw(bkg, bkg->pos, v2i(0, (bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)));
+		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, -(lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i(0, (bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
 	}
 }
 
-void background_draw(Background *bkg, v2i pos, v2i leftCorner) {
+void background_draw(Background *bkg, v3i pos, v2i leftCorner, bool negative, v2i maskpos) {
 	for (int i = 0; i < 3; i++) {
-		bkg->screens.find(pos)->second[i]->draw(leftCorner[0], leftCorner[1]);
+		if (bkg->screens.find(pos) != bkg->screens.end()) {
+			bkg->screens.find(pos)->second[i]->drawMasked(leftCorner[0], leftCorner[1], bkg->mask, negative, maskpos);
+		}
 	}
 }
 
 bool nextLeftBackground(Background *bkg, time_t lastFrame) {
 	bkg->oldPos = bkg->pos;
 	bkg->pos[0]--;
-	if (bkg->screens.find(bkg->pos) == bkg->screens.end() || bkg->moving != 0) {
+	if (bkg->screens.find(v3i(bkg->pos,0)) == bkg->screens.end() || bkg->moving != 0) {
 		bkg->pos[0]++;
 		return false;
 	}
@@ -171,7 +215,7 @@ bool nextLeftBackground(Background *bkg, time_t lastFrame) {
 bool nextRightBackground(Background *bkg, time_t lastFrame) {
 	bkg->oldPos = bkg->pos;
 	bkg->pos[0]++;
-	if (bkg->screens.find(bkg->pos) == bkg->screens.end() || bkg->moving != 0) {
+	if (bkg->screens.find(v3i(bkg->pos,0)) == bkg->screens.end() || bkg->moving != 0) {
 		bkg->pos[0]--;
 		return false;
 	}
@@ -184,7 +228,7 @@ bool nextRightBackground(Background *bkg, time_t lastFrame) {
 bool nextUpBackground(Background *bkg, time_t lastFrame) {
 	bkg->oldPos = bkg->pos;
 	bkg->pos[1]++;
-	if (bkg->screens.find(bkg->pos) == bkg->screens.end() || bkg->moving !=0) {
+	if (bkg->screens.find(v3i(bkg->pos,0)) == bkg->screens.end() || bkg->moving !=0) {
 		bkg->pos[1]--;
 		return false;
 	}
@@ -197,7 +241,7 @@ bool nextUpBackground(Background *bkg, time_t lastFrame) {
 bool nextDownBackground(Background *bkg, time_t lastFrame) {
 	bkg->oldPos = bkg->pos;
 	bkg->pos[1]--;
-	if (bkg->screens.find(bkg->pos) == bkg->screens.end() || bkg->moving != 0) {
+	if (bkg->screens.find(v3i(bkg->pos,0)) == bkg->screens.end() || bkg->moving != 0) {
 		bkg->pos[1]++;
 		return false;
 	}

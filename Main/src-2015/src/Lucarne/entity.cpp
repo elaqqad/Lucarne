@@ -131,19 +131,19 @@ void lua_set_jump(float ix_foot, float iy_foot, float ix_left, float iy_left, fl
 	static t_time tmJump = milliseconds();
 	t_time now = milliseconds();
 	if (now - tmJump > 200) {
-		if ((g_Current->name == "player"  && numLeftContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numLeftContacts2 > 0 && numFootContacts2 == 0))
+		if ((g_Current->name == "player"  && numLeftContacts1 > 0 && numFootContacts1 == 0))
 		{
 			lua_set_velocity_x(ix_left);
 			lua_set_velocity_y(iy_left);
 
 		}
-		else if ((g_Current->name == "player" && numRightContacts1 > 0 && numFootContacts1 == 0) || (g_Current->name == "player2" && numRightContacts2 > 0 && numFootContacts2 == 0))
+		else if ((g_Current->name == "player" && numRightContacts1 > 0 && numFootContacts1 == 0))
 		{
 			lua_set_velocity_x(ix_right);
 			lua_set_velocity_y(iy_right);
 		}
 
-		else if ((g_Current->name == "player"  && numFootContacts1 > 0) || (g_Current->name == "player2" && numFootContacts2 > 0))
+		else if ((g_Current->name == "player"  && numFootContacts1 > 0))
 		{
 			lua_set_velocity_x(ix_foot);
 			lua_set_velocity_y(iy_foot);
@@ -154,17 +154,17 @@ void lua_set_jump(float ix_foot, float iy_foot, float ix_left, float iy_left, fl
 }
 
 void lua_set_walk(float ix_vel, float ix_jmp){
-	if ((g_Current->name == "player" && numFootContacts1 > 0) || (g_Current->name == "player2" &&  numFootContacts2 > 0)){
+	if ((g_Current->name == "player" && numFootContacts1 > 0)){
 		lua_set_velocity_x(ix_vel);
 	}
 
-	else if ((g_Current->name == "player" && (numRightContacts1 > 0 && ix_jmp >= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numRightContacts2 > 0 && ix_jmp >= 0) && numFootContacts2 == 0)){
+	else if ((g_Current->name == "player" && (numRightContacts1 > 0 && ix_jmp >= 0) && numFootContacts1 == 0)){
 		lua_set_velocity_x(0);
 		lua_set_velocity_y(-1);
 
 	}
 
-	else if ((g_Current->name == "player" && (numLeftContacts1 > 0 && ix_jmp <= 0) && numFootContacts1 == 0) || (g_Current->name == "player2" && (numLeftContacts2 > 0 && ix_jmp <= 0) && numFootContacts2 == 0)){
+	else if ((g_Current->name == "player" && (numLeftContacts1 > 0 && ix_jmp <= 0) && numFootContacts1 == 0)) {
 		lua_set_velocity_x(0);
 		lua_set_velocity_y(-1);
 	}
@@ -346,38 +346,6 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 		fixtureDef.isSensor = true;
 		b2Fixture* rightSensorFixture = e->body->CreateFixture(&fixtureDef);
 		rightSensorFixture->SetUserData((void*)4);
-
-	}
-
-
-	if (e->name == "player2"){
-
-		fixtureDef.density = 0.0f;
-		fixtureDef.friction = 0.0f;
-		fixtureDef.restitution = 0.0f;
-		//add foot sensor fixture
-		box.SetAsBox(szx - in_meters(2), in_meters(2), b2Vec2(ctrx, ctry - szy - in_meters(2)), in_meters(0));
-		fixtureDef.isSensor = true;
-		b2Fixture* footSensorFixture = e->body->CreateFixture(&fixtureDef);
-		footSensorFixture->SetUserData((void*)5);
-
-
-		box.SetAsBox(in_meters(2), szy - in_meters(3), b2Vec2(ctrx - szx - in_meters(2), ctry), in_meters(0));
-		fixtureDef.isSensor = true;
-		b2Fixture* leftSensorFixture = e->body->CreateFixture(&fixtureDef);
-		leftSensorFixture->SetUserData((void*)6);
-
-
-		box.SetAsBox(szx - in_meters(3), in_meters(2), b2Vec2(ctrx, ctry + szy + in_meters(2)), in_meters(0));
-		fixtureDef.isSensor = true;
-		b2Fixture* headSensorFixture = e->body->CreateFixture(&fixtureDef);
-		headSensorFixture->SetUserData((void*)7);
-
-
-		box.SetAsBox(in_meters(2), szy - in_meters(3), b2Vec2(ctrx + szx + in_meters(2), ctry), in_meters(0));
-		fixtureDef.isSensor = true;
-		b2Fixture* rightSensorFixture = e->body->CreateFixture(&fixtureDef);
-		rightSensorFixture->SetUserData((void*)8);
 
 	}
 

@@ -81,7 +81,10 @@ void  DrawImage::draw(int x,int y)
   s_DrawImage.begin();
   m_Tex->bind();
   s_DrawImage.u_Image    .set(0);
-  v2f dim = V2F((float)s_Width,(float)s_Height);
+  s_DrawImage.u_Mask.set(0);
+  s_DrawImage.u_UseMask.set(0);
+  s_DrawImage.u_RevertMask.set(0);
+  v2f dim = V2F((float)s_Width, (float)s_Height);
   s_DrawImage.u_Scale    .set( V2F((float)m_Tex->w(),(float)m_Tex->h()) / dim);
   s_DrawImage.u_Translate.set( V2F((float)x,(float)y) / dim );
   s_DrawImage.u_ImageSize.set( V2F((float)m_Tex->w(),(float)m_Tex->h()) );
@@ -89,6 +92,43 @@ void  DrawImage::draw(int x,int y)
   sq.render();
   s_DrawImage.end(); 
   glPopAttrib();
+}
+
+// ------------------------------------------------------------------
+
+void DrawImage::drawMasked(int x, int y, Tex2DRGBA_Ptr mask, bool negative, v2i maskpos)
+{
+	static Shapes::Square sq;
+	glPushAttrib(GL_ENABLE_BIT);
+	glDisable(GL_CULL_FACE);
+	glDisable(GL_DEPTH_TEST);
+	glEnable(GL_ALPHA_TEST);
+	glAlphaFunc(GL_GREATER, 0);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+	s_DrawImage.begin();
+	m_Tex->bind();
+	s_DrawImage.u_Image.set(0);
+	
+	glActiveTextureARB(GL_TEXTURE1_ARB);
+	glBindTexture(GL_TEXTURE_2D, mask->handle());
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+	glActiveTextureARB(GL_TEXTURE0_ARB);
+	s_DrawImage.u_Mask.set(1);
+	s_DrawImage.u_MaskSize.set(v2f(mask->w(),mask->h()));
+	s_DrawImage.u_MaskPos.set(v2f(maskpos));
+
+	s_DrawImage.u_UseMask.set(1);
+	s_DrawImage.u_RevertMask.set( negative ? 1 : 0);
+	v2f dim = V2F((float)s_Width, (float)s_Height);
+	s_DrawImage.u_Scale.set(V2F((float)m_Tex->w(), (float)m_Tex->h()) / dim);
+	s_DrawImage.u_Translate.set(V2F((float)x, (float)y) / dim);
+	s_DrawImage.u_ImageSize.set(V2F((float)m_Tex->w(), (float)m_Tex->h()));
+	s_DrawImage.u_UVWH.set(V4F(0, 0, (float)m_Tex->w(), (float)m_Tex->h()));
+	sq.render();
+	s_DrawImage.end();
+	glPopAttrib();
 }
 
 // ------------------------------------------------------------------
@@ -104,7 +144,10 @@ void DrawImage::drawSub(v2i screen_pos,v2i screen_size,v2i table_pos,v2i table_s
   s_DrawImage.begin();
   m_Tex->bind();
   s_DrawImage.u_Image    .set(0);
-  v2f dim = V2F((float)s_Width,(float)s_Height);
+  s_DrawImage.u_Mask.set(0);
+  s_DrawImage.u_UseMask.set(0);
+  s_DrawImage.u_RevertMask.set(0);
+  v2f dim = V2F((float)s_Width, (float)s_Height);
   s_DrawImage.u_Scale    .set( V2F((float)screen_size[0],(float)screen_size[1]) / dim);
   s_DrawImage.u_Translate.set( V2F((float)screen_pos[0] ,(float)screen_pos[1]) / dim );
   s_DrawImage.u_ImageSize.set( V2F((float)m_Tex->w(),(float)m_Tex->h()) );
