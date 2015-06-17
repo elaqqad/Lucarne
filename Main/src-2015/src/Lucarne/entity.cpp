@@ -37,7 +37,7 @@ DrawImage *loadAnimation(string filename)
 {
 	try {
 		if (g_Animations.find(filename) == g_Animations.end()) {
-			DrawImage *img = new DrawImage((sourcePath() + "/data/sprites/" + filename).c_str(), v3b(255, 0, 255));
+			DrawImage *img = new DrawImage((executablePath() + "/data/sprites/" + filename).c_str(), v3b(255, 0, 255));
 			g_Animations[filename] = img;
 			return img;
 		}
@@ -207,9 +207,8 @@ void begin_script_call(Entity *e)
 	v2f pos = entity_get_pos(e);
 	globals(e->script->lua)["pos_x"] = pos[0];
 	globals(e->script->lua)["pos_y"] = pos[1];
-	globals(e->script->lua)["killingContact"] = e->killingContact;
-	globals(e->script->lua)["killer"] = e->killer;
-	globals(e->script->lua)["life"] = e->life;
+	globals(e->script->lua)["killed"] = e->killed;
+
 }
 
 // ------------------------------------------------------------------
@@ -219,13 +218,13 @@ void end_script_call(Entity *e)
 	// feedback globals
 	//e->pos[0] = luabind::object_cast<float>(globals(e->script->lua)["pos_x"]);
 	//e->pos[1] = luabind::object_cast<float>(globals(e->script->lua)["pos_y"]);
-	e->killingContact = luabind::object_cast<bool>(globals(e->script->lua)["killingContact"]);
+	e->killed = luabind::object_cast<bool>(globals(e->script->lua)["killed"]);
 	g_Current = NULL;
 }
 
 // ------------------------------------------------------------------
 
-Entity *entity_create(string name, int killer, string script, v2i pos)
+Entity *entity_create(string name, string script, v2i pos)
 {
 	Entity *e = new Entity;
 
@@ -233,19 +232,8 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	e->currentAnim = "";
 	e->currentFrame = 0;
 	e->lastAnimUpdate = 0;
-	e->killingContact = false;
-	e->killer = killer;
-	e->score = 0;
 	e->pos = pos;
-	if (e->killer == 1)
-	{
-		e->life = 3;
-	}
-	else
-	{
-		e->life = 1;
-	}
-
+	e->killed = false;
 	e->animIsPlaying = false;
 
 	/// scripting
@@ -268,7 +256,7 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	}
 	// load the script (global space gets executed)
 	g_Current = e;
-	script_load(e->script, sourcePath() + "/data/scripts/" + script);
+	script_load(e->script, executablePath() + "/data/scripts/" + script);
 	g_Current = NULL;
 
 	// read physics properties
@@ -293,8 +281,6 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	// setup damping
 	e->body->SetLinearDamping(0.0f);
 	//e->body->SetAngularDamping(0.01f);
-
-
 	// define a box shape for our dynamic body.
 	b2PolygonShape box;
 	box.SetAsBox(szx, szy, b2Vec2(ctrx, ctry), 0.0f);
@@ -310,7 +296,7 @@ Entity *entity_create(string name, int killer, string script, v2i pos)
 	fixtureDef.friction = 0.6f;
 
 	// how bouncy?
-	fixtureDef.restitution = 0.01f;
+	fixtureDef.restitution = 0.0f;
 
 	// user data (pointer to entity being created)
 	fixtureDef.userData = (void*)(e);
@@ -379,12 +365,7 @@ void    entity_set_pos(Entity *e, v2f p)
 
 void    entity_draw(Entity *e)
 {
-	if (e->killingContact){
-		e->life -= 1;
-		e->killingContact = false;
-		entity_set_pos(e, e->initialCoordinates);
-	}
-	if (e->life == 0) {
+	if (e->killed ) {
 		return;
 	}
 	if (e->anims.find(e->currentAnim) == e->anims.end()) {
@@ -434,7 +415,7 @@ void    entity_draw(Entity *e)
 
 void    entity_step(Entity *e, time_t elapsed)
 {
-	if (e->life == 0) {
+	if (e->killed) {
 		// does the body still exist?
 		if (e->body != NULL) {
 			// remove from simulation!
@@ -463,9 +444,13 @@ void    entity_step(Entity *e, time_t elapsed)
 void    entity_contact(Entity *e, Entity *with)
 {
 	// call stepping function from script
+	
 	begin_script_call(e);
 	try {
-		call_function<void>(e->script->lua, "contact", with->killer);
+		call_function<void>(e->script->lua, "contact", with->name);
+		if (with->name == "player"){
+			e->killed = true;
+		}
 	}
 	catch (luabind::error& e) {
 		cerr << Console::red << e.what() << ' ' << Console::gray << endl;
@@ -485,4 +470,4 @@ AAB<2>  entity_bbox(Entity *e)
 	return bx;
 }
 
-// ------------------------------------------------------------------
+// -----------------------------------------------------------------
