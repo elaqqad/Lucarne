@@ -5,17 +5,14 @@
 #include "script.h"
 #include "entity.h"
 
+int userDataCount = 1000;
+
 // The World (in physics.cpp)
 extern b2World *g_World;
 
 // get access to foot contact from main.cpp
 extern int             numFootContacts1;
-extern int             numLeftContacts1;
-extern int             numRightContacts1;
 extern int             numFootContacts2;
-extern int             numLeftContacts2;
-extern int             numRightContacts2;
-
 
 // ------------------------------------------------------------------
 
@@ -126,72 +123,23 @@ void lua_set_impulse(float ix, float iy)
 	g_Current->body->ApplyLinearImpulse(g_Current->body->GetMass()* b2Vec2(ix, iy), g_Current->body->GetWorldCenter());
 }
 
-void lua_set_jump(float ix_foot, float iy_foot, float ix_left, float iy_left, float ix_right, float iy_right){
-
+void lua_set_jump(float vx, float vy){
 	static t_time tmJump = milliseconds();
 	t_time now = milliseconds();
 	if (now - tmJump > 200) {
-		if ((g_Current->name == "player"  && numLeftContacts1 > 0 && numFootContacts1 == 0))
-		{
-			lua_set_velocity_x(ix_left);
-			lua_set_velocity_y(iy_left);
-
-		}
-		else if ((g_Current->name == "player" && numRightContacts1 > 0 && numFootContacts1 == 0))
-		{
-			lua_set_velocity_x(ix_right);
-			lua_set_velocity_y(iy_right);
-		}
-
-		else if ((g_Current->name == "player"  && numFootContacts1 > 0))
-		{
-			lua_set_velocity_x(ix_foot);
-			lua_set_velocity_y(iy_foot);
-
+		if ((g_Current->name == "boy"  && numFootContacts1 > 0) || (g_Current->name == "girl" && numFootContacts2 > 0)) {
+			lua_set_velocity_x(vx);
+			lua_set_velocity_y(vy);
 		}
 		tmJump = now;
 	}
 }
 
-void lua_set_walk(float ix_vel, float ix_jmp){
-	if ((g_Current->name == "player" && numFootContacts1 > 0)){
+void lua_set_walk(float ix_vel){
+	if ((g_Current->name == "boy" && numFootContacts1 > 0) || (g_Current->name == "girl" && numFootContacts2 > 0)){
 		lua_set_velocity_x(ix_vel);
 	}
-
-	else if ((g_Current->name == "player" && (numRightContacts1 > 0 && ix_jmp >= 0) && numFootContacts1 == 0)){
-		lua_set_velocity_x(0);
-		lua_set_velocity_y(-1);
-
-	}
-
-	else if ((g_Current->name == "player" && (numLeftContacts1 > 0 && ix_jmp <= 0) && numFootContacts1 == 0)) {
-		lua_set_velocity_x(0);
-		lua_set_velocity_y(-1);
-	}
-
-	else{
-		b2Vec2 vel = g_Current->body->GetLinearVelocity();
-		static t_time tmJump = milliseconds();
-		t_time now = milliseconds();
-		if (now - tmJump > 300) {
-			lua_set_impulse(ix_jmp / 100, 0);
-			tmJump = now;
-		}
-
-		if (vel.x > abs(ix_vel)){
-			lua_set_velocity_x(abs(ix_vel));
-		}
-		else if (vel.x < -abs(ix_vel)){
-			lua_set_velocity_x(-abs(ix_vel));
-		}
-
-	}
-
 }
-
-
-
-
 
 // ------------------------------------------------------------------
 
@@ -277,7 +225,6 @@ Entity *entity_create(string name, string script, v2i pos)
 	e->body->SetSleepingAllowed(can_sleep);
 	e->body->SetFixedRotation(!can_rotate);
 
-
 	// setup damping
 	e->body->SetLinearDamping(0.0f);
 	//e->body->SetAngularDamping(0.01f);
@@ -298,73 +245,72 @@ Entity *entity_create(string name, string script, v2i pos)
 	// how bouncy?
 	fixtureDef.restitution = 0.0f;
 
-	// user data (pointer to entity being created)
-	fixtureDef.userData = (void*)(e);
-
-	// add the shape to the body.
-	e->body->CreateFixture(&fixtureDef);
-
-	if (e->name == "player"){
+	//add foot sensor fixture
+	if (e->name == "boy") {
+		fixtureDef.userData = ((void*)101);
+		e->body->CreateFixture(&fixtureDef);
 
 		fixtureDef.density = 0.0f;
 		fixtureDef.friction = 0.0f;
 		fixtureDef.restitution = 0.0f;
-		//add foot sensor fixture
+
 		box.SetAsBox(szx - in_meters(2), in_meters(2), b2Vec2(ctrx, ctry - szy - in_meters(2)), in_meters(0));
 		fixtureDef.isSensor = true;
 		b2Fixture* footSensorFixture = e->body->CreateFixture(&fixtureDef);
-		footSensorFixture->SetUserData((void*)1);
-
-
-		box.SetAsBox(in_meters(2), szy - in_meters(3), b2Vec2(ctrx - szx - in_meters(2), ctry), in_meters(0));
-		fixtureDef.isSensor = true;
-		b2Fixture* leftSensorFixture = e->body->CreateFixture(&fixtureDef);
-		leftSensorFixture->SetUserData((void*)2);
-
+		footSensorFixture->SetUserData((void*)102);
 
 		box.SetAsBox(szx - in_meters(3), in_meters(2), b2Vec2(ctrx, ctry + szy + in_meters(2)), in_meters(0));
 		fixtureDef.isSensor = true;
 		b2Fixture* headSensorFixture = e->body->CreateFixture(&fixtureDef);
-		headSensorFixture->SetUserData((void*)3);
+		headSensorFixture->SetUserData((void*)103);
+	} else if (e->name == "girl") {
+		fixtureDef.userData = ((void*)201);
+		e->body->CreateFixture(&fixtureDef);
 
+		fixtureDef.density = 0.0f;
+		fixtureDef.friction = 0.0f;
+		fixtureDef.restitution = 0.0f;
 
-		box.SetAsBox(in_meters(2), szy - in_meters(3), b2Vec2(ctrx + szx + in_meters(2), ctry), in_meters(0));
+		box.SetAsBox(szx - in_meters(2), in_meters(2), b2Vec2(ctrx, ctry - szy - in_meters(2)), in_meters(0));
 		fixtureDef.isSensor = true;
-		b2Fixture* rightSensorFixture = e->body->CreateFixture(&fixtureDef);
-		rightSensorFixture->SetUserData((void*)4);
+		b2Fixture* footSensorFixture = e->body->CreateFixture(&fixtureDef);
+		footSensorFixture->SetUserData((void*)202);
 
+		box.SetAsBox(szx - in_meters(3), in_meters(2), b2Vec2(ctrx, ctry + szy + in_meters(2)), in_meters(0));
+		fixtureDef.isSensor = true;
+		b2Fixture* headSensorFixture = e->body->CreateFixture(&fixtureDef);
+		headSensorFixture->SetUserData((void*)203);
+	} else {
+		fixtureDef.userData = (void*)userDataCount;
+		userDataCount += 1;
+		e->body->CreateFixture(&fixtureDef);
 	}
-
 	return e;
 }
 
 // ------------------------------------------------------------------
 
-v2f     entity_get_pos(Entity *e)
-{
+v2f entity_get_pos(Entity *e) {
 	b2Vec2 position = e->body->GetTransform().position;
 	return v2f(in_px(position.x), in_px(position.y));
 }
 
 // ------------------------------------------------------------------
 
-float   entity_get_angle(Entity *e)
-{
+float entity_get_angle(Entity *e) {
 	return e->body->GetTransform().R.GetAngle();
 }
 
 // ------------------------------------------------------------------
 
-void    entity_set_pos(Entity *e, v2f p)
-{
+void entity_set_pos(Entity *e, v2f p) {
 	e->body->SetTransform(b2Vec2(in_meters(p[0]), in_meters(p[1])), 0.0f);
 	e->initialCoordinates = p;
 }
 
 // ------------------------------------------------------------------
 
-void    entity_draw(Entity *e)
-{
+void entity_draw(Entity *e) {
 	if (e->killed ) {
 		return;
 	}

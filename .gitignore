@@ -36,5 +36,5 @@
 *.log
 
 # Directories
-BUILD/
-LibSL-bin-win32/
+Main/BUILD/
+Main/LibSL-bin-win32/

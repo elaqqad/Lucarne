@@ -36,7 +36,8 @@ Tilemap        *g_Tilemap = NULL;
 Background     *g_Bkg = NULL;
 
 vector<Entity*> g_Entities;
-Entity*         g_Player = NULL;
+Entity*         g_Boy = NULL;
+Entity*         g_Girl = NULL;
 
 int             numFootContacts1 = 0;
 int             numLeftContacts1 = 0;
@@ -75,12 +76,6 @@ void mainKeyPressed(uchar key)
 			g_GameState = End;
 		}
 		g_Keys[key] = true;
-
-		if (key == ' ') {
-			Entity *c = entity_create("coin0", "coin.lua", v2i(0, 0));
-			entity_set_pos(c, v2f(256 + ((rand() % 128) - 64), 350));
-			g_Entities.push_back(c);
-		}
 	}
 
 }
@@ -115,7 +110,6 @@ void mainRender()
 		imag->draw(0, 0);
 	}
 	else if (g_GameState == Playing){
-
 		// music
 		/*if (!music_playing){
 			play_sound("theme.wav");
@@ -140,49 +134,81 @@ void mainRender()
 			}
 
 			//Background & border interaction with the player
-			if (entity_get_pos(g_Player)[0] >= c_ScreenW) { //Right
+			if (entity_get_pos(g_Boy)[0] >= c_ScreenW || entity_get_pos(g_Girl)[0] >= c_ScreenW) { //Right
 				if (nextRightBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]+3));
+					v4i spawn = loadLevelData(g_Bkg);
+					entity_set_pos(g_Boy, v2f(spawn[0], spawn[1]));
+					entity_set_pos(g_Girl, v2f(spawn[2], spawn[3]));
 				}
 				else {
-					entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]));
+					if (entity_get_pos(g_Boy)[0] >= c_ScreenW) {
+						entity_set_pos(g_Boy, v2f(c_ScreenW, entity_get_pos(g_Boy)[1]));
+					}
+					else {
+						entity_set_pos(g_Girl, v2f(c_ScreenW, entity_get_pos(g_Girl)[1]));
+					}
 				}
 			}
-			else if (entity_get_pos(g_Player)[0] <= 0) { //Left
+			else if (entity_get_pos(g_Boy)[0] <= 0 || entity_get_pos(g_Girl)[0] <= 0) { //Left
 				if (nextLeftBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(c_ScreenW, entity_get_pos(g_Player)[1]+3));
+					v4i spawn = loadLevelData(g_Bkg);
+					entity_set_pos(g_Boy, v2f(spawn[0], spawn[1]));
+					entity_set_pos(g_Girl, v2f(spawn[2], spawn[3]));
 				}
 				else {
-					entity_set_pos(g_Player, v2f(0, entity_get_pos(g_Player)[1]));
+					if (entity_get_pos(g_Boy)[0] <= 0) {
+						entity_set_pos(g_Boy, v2f(0, entity_get_pos(g_Boy)[1]));
+					}
+					else {
+						entity_set_pos(g_Girl, v2f(0, entity_get_pos(g_Girl)[1]));
+					}
 				}
 			}
-			else if (entity_get_pos(g_Player)[1] <= 0) { //Down
+			else if (entity_get_pos(g_Boy)[1] <= 0 || entity_get_pos(g_Girl)[1] <= 0) { //Down
 				if (nextDownBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+					v4i spawn = loadLevelData(g_Bkg);
+					entity_set_pos(g_Boy, v2f(spawn[0], spawn[1]));
+					entity_set_pos(g_Girl, v2f(spawn[2], spawn[3]));
 				}
 				else {
-					entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+					if (entity_get_pos(g_Boy)[1] <= 0) {
+						entity_set_pos(g_Boy, v2f(entity_get_pos(g_Boy)[0], 0));
+					}
+					else {
+						entity_set_pos(g_Girl, v2f(entity_get_pos(g_Girl)[0], 0));
+					}
 				}
 			}
-			else if (entity_get_pos(g_Player)[1] >= c_ScreenH) { //Up
+			else if (entity_get_pos(g_Boy)[1] >= c_ScreenH || entity_get_pos(g_Girl)[1] >= c_ScreenH) { //Up
 				if (nextUpBackground(g_Bkg, g_LastFrame) == true) {
-					entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], 0));
+					v4i spawn = loadLevelData(g_Bkg);
+					entity_set_pos(g_Boy, v2f(spawn[0], spawn[1]));
+					entity_set_pos(g_Girl, v2f(spawn[2], spawn[3]));
 				}
 				else {
-					entity_set_pos(g_Player, v2f(entity_get_pos(g_Player)[0], c_ScreenH));
+					if (entity_get_pos(g_Boy)[1] >= c_ScreenH) {
+						entity_set_pos(g_Boy, v2f(entity_get_pos(g_Boy)[0], c_ScreenH));
+					}
+					else {
+						entity_set_pos(g_Girl, v2f(entity_get_pos(g_Girl)[0], c_ScreenH));
+					}
 				}
 			}
+
+			//// Display
+			clearScreen();
+			// -> draw background
+			background_draw(g_Bkg, g_LastFrame, v2i(entity_get_pos(g_Girl)));
+			// -> draw all entities
+			for (int a = 0; a < (int)g_Entities.size(); a++) {
+				entity_draw(g_Entities[a]);
+			}
+		}
+		else {
+			clearScreen();
+			background_draw(g_Bkg, g_LastFrame, v2i(-2000, -2000));
 		}
 
-		//// Display
-
-		clearScreen();
-		// -> draw background
-		background_draw(g_Bkg, g_LastFrame, v2i(entity_get_pos(g_Player)));
-		// -> draw all entities
-		for (int a = 0; a < (int)g_Entities.size(); a++) {
-			entity_draw(g_Entities[a]);
-		}
 		// -> draw physics debug layer
 		//phy_debug_draw();
 	}
@@ -232,31 +258,16 @@ int main(int argc, const char **argv)
 		phy_init();
 
 		// bind tilemap to physics
-		loadGround(g_Bkg->pos);
-
+		loadLevelData(g_Bkg);
 		
-		// load a simple entity
-		for (int i = 0; i <= 10; i++)
-		{
-			Entity *c = entity_create("coin"+char(i),"coin.lua", v2i(0, 0));
-			g_Entities.push_back(c);
+		g_Boy = entity_create("boy", "boy.lua", v2i(0, 0));
+		entity_set_pos(g_Boy, v2f(300, 200));
+		g_Entities.push_back(g_Boy);
 
-			entity_set_pos(c, v2f(32, 32));
-		} {
-			Entity *c = entity_create("coin1", "coin.lua", v2i(0, 0));
-			g_Entities.push_back(c);
-			entity_set_pos(c, v2f(96, 32));
-		} {
-			Entity *c = entity_create("coin2", "coin.lua", v2i(0, 0));
-			g_Entities.push_back(c);
-			entity_set_pos(c, v2f(128, 32));
-		} {
-			Entity *c = entity_create("player", "player.lua", v2i(0, 0));
-			entity_set_pos(c, v2f(300, 200));
+		g_Girl = entity_create("girl", "girl.lua", v2i(0, 0));
+		entity_set_pos(g_Girl, v2f(600, 200));
+		g_Entities.push_back(g_Girl);
 
-			g_Player = c;
-			g_Entities.push_back(c);
-		}
 		//init_sound();
 		//std::cerr << executablePath();
 		g_LastFrame = milliseconds();

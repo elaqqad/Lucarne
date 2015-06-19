@@ -30,7 +30,7 @@ typedef struct
 
 // ------------------------------------------------------------------
 
-void loadGround(v2i pos);
+v4i loadLevelData(Background *bkg);
 Background *background_init(int w, int h);
 void background_draw(Background *bkg, time_t lastFrame,v2i playerpos);
 void        background_draw(Background*, time_t lastFrame, int world, bool negative, v2i maskpos);

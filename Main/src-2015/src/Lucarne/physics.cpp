@@ -32,74 +32,49 @@ int in_px(float m) {
 
 // ------------------------------------------------------------------------
 
-class ContactListener : public b2ContactListener
-{
+class ContactListener : public b2ContactListener {
 public:
-	void BeginContact(b2Contact* contact)  {
-		//check if player1 touch the floor
+	void BeginContact(b2Contact* contact) {
+		//check if boy or girl touches the floor
 		void* fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 1)
+		if (fixtureUserData != NULL && (int)fixtureUserData == 102)
 			numFootContacts1++;
+		if (fixtureUserData != NULL && (int)fixtureUserData == 202)
+			numFootContacts2++;
 		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 1)
+		if (fixtureUserData != NULL && (int)fixtureUserData == 102)
 			numFootContacts1++;
-
-		//check if player1 touch by the left
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 2)
-			numLeftContacts1++;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 2)
-			numLeftContacts1++;
-
-		//check if player1 touch by the right
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
-			numRightContacts1++;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
-			numRightContacts1++;
-
+		if (fixtureUserData != NULL && (int)fixtureUserData == 202)
+			numFootContacts2++;
 	}
 
-	void EndContact(b2Contact* contact)    {
-
-
-		//check if player1 touch the floor
+	void EndContact(b2Contact* contact) {
+		//check if boy or girl touches the floor
 		void* fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 1)
+		if (fixtureUserData != NULL && (int)fixtureUserData == 102)
 			numFootContacts1--;
+		if (fixtureUserData != NULL && (int)fixtureUserData == 202)
+			numFootContacts2--;
 		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 1)
+		if (fixtureUserData != NULL && (int)fixtureUserData == 102)
 			numFootContacts1--;
-
-		//check if player1 touch by the left
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 2)
-			numLeftContacts1--;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 2)
-			numLeftContacts1--;
-
-		//check if player1 touch by the right
-		fixtureUserData = contact->GetFixtureA()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
-			numRightContacts1--;
-		fixtureUserData = contact->GetFixtureB()->GetUserData();
-		if (fixtureUserData != NULL && (int)fixtureUserData == 4)
-			numRightContacts1--;
-
+		if (fixtureUserData != NULL && (int)fixtureUserData == 202)
+			numFootContacts2--;
 	}
-	void PreSolve(b2Contact* contact, const b2Manifold* oldManifold)
-	{
+
+	void PreSolve(b2Contact* contact, const b2Manifold* oldManifold) {
 		// get fixtures
 		b2Fixture    *fA = contact->GetFixtureA();
 		b2Fixture    *fB = contact->GetFixtureB();
 		void *dA = fA->GetUserData();
 		void *dB = fB->GetUserData();
 		if (dA != NULL && dB != NULL) {
-			entity_contact((Entity*)dA, (Entity*)dB);
-			entity_contact((Entity*)dB, (Entity*)dA);
+			std::cerr << (int)dA / 100 << " " << (int)dB / 100 << std::endl;
+			if ((int)dA / 100 != (int)dB / 100) {
+				contact->SetEnabled(false);
+			}
+			//entity_contact((Entity*)dA, (Entity*)dB);
+			//entity_contact((Entity*)dB, (Entity*)dA);
 		}
 		// To disable contact: contact->SetEnabled(false);
 	}

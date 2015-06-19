@@ -59,7 +59,7 @@ void loadBackground(Background *bkg, v2i pos, int world) {
 	}
 }
 
-void loadGround(v2i pos) {
+v4i loadLevelData(Background *bkg) {
 	// define the dynamic body for the entire tilemap
 	if (currentBody != NULL) {
 		g_World->DestroyBody(currentBody);
@@ -69,56 +69,81 @@ void loadGround(v2i pos) {
 	bodyDef.position.Set(0.0f, 0.0f);
 	currentBody = g_World->CreateBody(&bodyDef);
 
-	//Load text file for ground
-	int length;
-	int sizey;
-	vector<int> sizex = vector<int>();
-	vector<float> angle = vector<float>();
-	vector<int> ctrx = vector<int>();
-	vector<int> ctry = vector<int>();
-	fstream file;
-	string currentLine;
+	//Load data files
+	vector<string> postfix = { "_b", "_g" };
+	v4i spawn;
+	for (int i = 0; i < 2; i++) {
+		int length;
+		vector<int> sizex = vector<int>();
+		vector<int> sizey = vector<int>();
+		vector<float> angle = vector<float>();
+		vector<int> ctrx = vector<int>();
+		vector<int> ctry = vector<int>();
+		fstream file;
+		string currentLine;
 
-	file.open(executablePath() + "/data/scripts/" + to_string(pos[0]) + "_" + to_string(pos[1]) + "_0_sol.txt", fstream::in);
+		file.open(executablePath() + "/data/screens/" + to_string(bkg->pos[0]) + "_" + to_string(bkg->pos[1]) + postfix[i] + ".dat", fstream::in);
 
+		//Read spawn points
+		if (i == 0) {
+			getline(file, currentLine);
+			spawn[0] = stoi(currentLine);
+			getline(file, currentLine);
+			spawn[1] = stoi(currentLine);
+		}
+		else {
+			getline(file, currentLine);
+			spawn[2] = stoi(currentLine);
+			getline(file, currentLine);
+			spawn[3] = stoi(currentLine);
+		}
 
-	getline(file, currentLine);
-	length = stof(currentLine);
-	getline(file, currentLine);
-	sizey = stof(currentLine);
+		//Read number of boxes
+		getline(file, currentLine);
+		getline(file, currentLine);
+		length = stoi(currentLine);
 
-	for (int i = 0; i < length; i++) {
-		getline(file, currentLine);
-		sizex.push_back(stoi(currentLine));
-		getline(file, currentLine);
-		angle.push_back(stof(currentLine));
-		getline(file, currentLine);
-		ctrx.push_back(stoi(currentLine));
-		getline(file, currentLine);
-		ctry.push_back(stoi(currentLine));
+		for (int j = 0; j < length; j++) {
+			getline(file, currentLine); // Separator line
+
+			getline(file, currentLine);
+			sizex.push_back(stoi(currentLine));
+			getline(file, currentLine);
+			sizey.push_back(stoi(currentLine));
+			getline(file, currentLine);
+			angle.push_back(stof(currentLine));
+			getline(file, currentLine);
+			ctrx.push_back(stoi(currentLine));
+			getline(file, currentLine);
+			ctry.push_back(stoi(currentLine));
+		}
+
+		for (int j = 0; j < length; j++) {
+			// define a box shape.
+			b2PolygonShape box;
+			box.SetAsBox(
+				in_meters(sizex[j] / 2), in_meters(sizey[j] / 2),  // size
+				b2Vec2(in_meters(ctrx[j]), in_meters(ctry[j])), // center
+				angle[j]);
+			// define the dynamic body fixture.
+			b2FixtureDef fixtureDef;
+			fixtureDef.shape = &box;
+			// set the box density to be zero, so it will be static.
+			fixtureDef.density = 1.0f;
+			// override the default friction.
+			fixtureDef.friction = 0.6f;
+			// how bouncy?
+			fixtureDef.restitution = 0.1f;
+			if (i == 0) {
+				fixtureDef.userData = ((void*)100);
+			}
+			else {
+				fixtureDef.userData = ((void*)200);
+			}
+			currentBody->CreateFixture(&fixtureDef);
+		}
 	}
-
-	for (int i = 0; i < length; i++) {
-		// define a box shape.
-		b2PolygonShape box;
-		box.SetAsBox(
-			in_meters(sizex[i] / 2), in_meters(sizey / 2),  // size
-			b2Vec2(in_meters(ctrx[i]), in_meters(ctry[i])), // center
-			angle[i]);
-		// define the dynamic body fixture.
-		b2FixtureDef fixtureDef;
-		fixtureDef.shape = &box;
-		// set the box density to be zero, so it will be static.
-		fixtureDef.density = 1.0f;
-		// override the default friction.
-		fixtureDef.friction = 0.6f;
-		// how bouncy?
-		fixtureDef.restitution = 0.1f;
-		// user data; set to NULL to distinguish from entities
-		fixtureDef.userData = (void*)NULL;
-		// add the shape to the body.
-		currentBody->CreateFixture(&fixtureDef);
-	}
+	return spawn;
 }
 
 // ------------------------------------------------------------------
@@ -210,7 +235,6 @@ bool nextLeftBackground(Background *bkg, time_t lastFrame) {
 	}
 	bkg->moving = 2;
 	bkg->startTime = lastFrame;
-	loadGround(bkg->pos);
 	return true;
 }
 
@@ -223,7 +247,6 @@ bool nextRightBackground(Background *bkg, time_t lastFrame) {
 	}
 	bkg->moving = 1;
 	bkg->startTime = lastFrame;
-	loadGround(bkg->pos);
 	return true;
 }
 
@@ -236,7 +259,6 @@ bool nextUpBackground(Background *bkg, time_t lastFrame) {
 	}
 	bkg->moving = 3;
 	bkg->startTime = lastFrame;
-	loadGround(bkg->pos);
 	return true;
 }
 
@@ -249,7 +271,6 @@ bool nextDownBackground(Background *bkg, time_t lastFrame) {
 	}
 	bkg->moving = 4;
 	bkg->startTime = lastFrame;
-	loadGround(bkg->pos);
 	return true;
 }
 
