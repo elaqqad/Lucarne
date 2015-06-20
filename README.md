@@ -28,8 +28,13 @@ D'abord le code ne doit pas contenir sourcepath() il faut tous les remplacer par
 installer: Click droit ---> view---> File system ---> application folder ---> Data et c'est là ou il faut l'ajouter.
 
 Maintenant pour que vous puissiez générer l'installeur il faut aller faire:
+ 
   lucarne ---> Build , vérifiez que tout est à jour
-  installer--->Build en mode release (il faut faire build pour l'installeur uniquement : click droit sur installer--->Build)
+   ======= Build: 6 succeeded, 0 failed, 0 up-to-date, 0 skipped ===== 
+  
+  installer--->Build en mode release (il faut faire build pour l'installeur uniquement : 
+  click droit sur installer--->Build)
+
   regarder dans le fichier \Lucarne\Main\src-2015\installer\Release  vous trouverez le fichier .msi et .exe et c'est fini
   
   
