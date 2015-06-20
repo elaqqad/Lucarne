@@ -22,3 +22,14 @@ To work on the project, you need:
  - All content should be added to src-2015\data
  - Scripts should be placed in src-2015\data\scripts
  - To launch the game, go to BUILD\src-2015
+
+## Générer l'installeur vous même 
+D'abord le code ne doit pas contenir sourcepath() il faut tous les remplacer par executablepath(), et aussi si vous avez ajouter un fichier Data au projet il faut l'ajouter aussi à l'installeur :
+installer: Click droit ---> view---> File system ---> application folder ---> Data et c'est là ou il faut l'ajouter.
+
+Maintenant pour que vous puissiez générer l'installeur il faut aller faire:
+  lucarne ---> Build , vérifiez que tout est à jour
+  installer--->Build en mode release (il faut faire build pour l'installeur uniquement : click droit sur installer--->Build)
+  regarder dans le fichier \Lucarne\Main\src-2015\installer\Release  vous trouverez le fichier .msi et .exe et c'est fini
+  
+  
