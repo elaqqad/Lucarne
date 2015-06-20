@@ -26,7 +26,7 @@ Background *background_init(int screenw,int screenh)
   bkg->moving = 0;
   loadBackground(bkg, bkg->pos, 0); // load first world bkg
   loadBackground(bkg, bkg->pos, 1); // load second world bkg
-  ImageRGBA_Ptr img( loadImage<ImageRGB>((sourcePath() + "/data/screens/mask.png").c_str())->cast<ImageRGBA>() );
+  ImageRGBA_Ptr img( loadImage<ImageRGB>((executablePath() + "/data/screens/mask.png").c_str())->cast<ImageRGBA>() );
   bkg->mask = Tex2DRGBA_Ptr( new Tex2DRGBA(img->pixels()) );
   return bkg;
 }
