@@ -162,7 +162,7 @@ void background_draw(Background *bkg, time_t lastFrame, v2i playerpos)
 
 	// draw first world
 	background_draw(bkg, lastFrame, 0, false, playerpos);
-	//phy_debug_draw();
+	phy_debug_draw();
 	////////////////////
 
 	// composite both
@@ -204,15 +204,15 @@ void background_draw(Background *bkg, time_t lastFrame,int world,bool negative, 
 		}
 	}
 	else if (bkg->moving == 3) {//3=Up
-		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
-		background_draw(bkg, v3i(bkg->pos, world), v2i(0, -(bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
+		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, -(lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i(0, +(bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
 	}
 	else if (bkg->moving == 4) {//4=Down
-		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, -(lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
-		background_draw(bkg, v3i(bkg->pos, world), v2i(0, (bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
+		background_draw(bkg, v3i(bkg->oldPos, world), v2i(0, (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME), negative, maskpos);
+		background_draw(bkg, v3i(bkg->pos, world), v2i(0, -(bkg->screenh - (lastFrame - bkg->startTime) * bkg->screenh / ANIMATION_TIME)), negative, maskpos);
 		if (lastFrame - bkg->startTime > ANIMATION_TIME) {
 			bkg->moving = 0;
 		}
