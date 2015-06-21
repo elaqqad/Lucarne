@@ -162,6 +162,7 @@ void background_draw(Background *bkg, time_t lastFrame, v2i playerpos)
 
 	// draw first world
 	background_draw(bkg, lastFrame, 0, false, playerpos);
+	//phy_debug_draw();
 	////////////////////
 
 	// composite both

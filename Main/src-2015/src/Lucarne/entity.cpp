@@ -271,6 +271,7 @@ Entity *entity_create(string name, string script, v2i pos)
 		fixtureDef.friction = 0.0f;
 		fixtureDef.restitution = 0.0f;
 
+		//Foot & head sensors
 		box.SetAsBox(szx - in_meters(2), in_meters(2), b2Vec2(ctrx, ctry - szy - in_meters(2)), in_meters(0));
 		fixtureDef.isSensor = true;
 		b2Fixture* footSensorFixture = e->body->CreateFixture(&fixtureDef);
@@ -280,6 +281,18 @@ Entity *entity_create(string name, string script, v2i pos)
 		fixtureDef.isSensor = true;
 		b2Fixture* headSensorFixture = e->body->CreateFixture(&fixtureDef);
 		headSensorFixture->SetUserData((void*)203);
+
+		//Halo
+		b2CircleShape halo;
+		halo.m_p.Set(ctrx, ctry);
+		halo.m_radius = in_meters(190.0f);
+		fixtureDef.shape = &halo;
+		fixtureDef.density = 1.0f;
+		fixtureDef.friction = 0.6f;
+		fixtureDef.restitution = 0.5f;
+		fixtureDef.isSensor = false;
+		fixtureDef.userData = ((void*)300);
+		e->body->CreateFixture(&fixtureDef);
 	} else {
 		fixtureDef.userData = (void*)userDataCount;
 		userDataCount += 1;

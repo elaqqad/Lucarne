@@ -69,7 +69,13 @@ public:
 		void *dA = fA->GetUserData();
 		void *dB = fB->GetUserData();
 		if (dA != NULL && dB != NULL) {
-			std::cerr << (int)dA / 100 << " " << (int)dB / 100 << std::endl;
+			if (((int)dA == 300 && (int)dB != 101) || ((int)dB == 300 && (int)dA != 101)) {
+				contact->SetEnabled(false);
+				return;
+			}
+			else if (((int)dA == 300 && (int)dB == 101) || ((int)dB == 300 && (int)dA == 101)) {
+				return;
+			}
 			if ((int)dA / 100 != (int)dB / 100) {
 				contact->SetEnabled(false);
 			}
