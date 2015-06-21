@@ -11,9 +11,6 @@ addanim('G_jump-left.png',32)
 addanim('G_standstill-right.png',32)
 addanim('G_walk-right.png',32)
 addanim('G_jump-right.png',32)
---Uncomment and update all of the animations related to turning when we have them
-addanim('gripe.turn_left_to_right.png',32)
-addanim('gripe.turn_right_to_left.png',32)
 
 playanim('G_standstill-left.png', true)
 stopanim()

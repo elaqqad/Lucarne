@@ -26,7 +26,7 @@ Background *background_init(int screenw,int screenh)
   bkg->moving = 0;
   loadBackground(bkg, bkg->pos, 0); // load first world bkg
   loadBackground(bkg, bkg->pos, 1); // load second world bkg
-  ImageRGBA_Ptr img( loadImage<ImageRGB>((executablePath() + "/data/screens/mask.png").c_str())->cast<ImageRGBA>() );
+  ImageRGBA_Ptr img( loadImage<ImageRGB>((executablePath() + "/data/general/mask.png").c_str())->cast<ImageRGBA>() );
   bkg->mask = Tex2DRGBA_Ptr( new Tex2DRGBA(img->pixels()) );
   return bkg;
 }
@@ -162,7 +162,7 @@ void background_draw(Background *bkg, time_t lastFrame, v2i playerpos)
 
 	// draw first world
 	background_draw(bkg, lastFrame, 0, false, playerpos);
-	phy_debug_draw();
+	//phy_debug_draw();
 	////////////////////
 
 	// composite both

@@ -99,13 +99,13 @@ void mainRender()
 	}
 	else if (g_GameState == ShowingSplash){
 		clearScreen();
-		string src = executablePath() + "/data/General/SplashScreen.png";
+		string src = executablePath() + "/data/general/SplashScreen.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
 	else if (g_GameState == ShowingMenu){
 		clearScreen();
-		string src = executablePath() + "/data/General/Mainmenu.png";
+		string src = executablePath() + "/data/general/Mainmenu.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
@@ -214,7 +214,7 @@ void mainRender()
 	}
 	else if (g_GameState == End){
 		clearScreen();
-		string src = executablePath()+ "/data/General/GameOver.png";
+		string src = executablePath()+ "/data/general/GameOver.png";
 		DrawImage* imag = new DrawImage(src.c_str(), v3b(255, 0, 255));
 		imag->draw(0, 0);
 	}
