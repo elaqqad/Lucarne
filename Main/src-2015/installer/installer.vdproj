@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_05D86A590F444AD081EFB7C16DC0242F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0CD6CD9A789A47A9961CFD36C73145C3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,7 +69,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_24C62F45297F445EAC5D04B959B8A8CF"
+        "MsmKey" = "8:_2705A3A53EDD4C91A3E81E4D8ACC87EB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -117,6 +123,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3F98CDDFB9404FD28773E821C855B5C3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_48EF0C2A705948068654D09E36BA1D9D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -124,6 +136,12 @@
         "Entry"
         {
         "MsmKey" = "8:_4F8803F0AE7640288FF93305442DEA21"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_544DB80B368349918A5F97369FDEC029"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -231,6 +249,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_8A67C9CC2FE747FDA9EB1E7046917803"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_902B2E17BFE344479FE0B1A2F5140871"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -249,6 +273,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_94A23E16E3DD4591BB05C88ECB543C67"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9595D2ED19B14B47B2558105242556EA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -261,13 +291,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9B3F15934BBB4D02B323E76F68C4037D"
+        "MsmKey" = "8:_987153643F254ADFA12A9ADC62389EB4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9B6274068EFE41A49B820458A3001C7A"
+        "MsmKey" = "8:_9B3F15934BBB4D02B323E76F68C4037D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -279,13 +309,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9DB15BB1EBA040B8AD0A985F4376C412"
+        "MsmKey" = "8:_9DA3C56E2F1742A1A58F5B7B81A740AC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A02ACCD908EB40E2866B5513AAAF3BCD"
+        "MsmKey" = "8:_9E8548AE704848D0987D8DCC82A4B3C1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9FCA7BBA0DC44569A7DD4F626A8C75E7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A13EE8C2849B42BD9A2EBEB54C983519"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -321,6 +363,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AFC71C6FF2F54D109A06735E6222D7DA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B0681002C0DA4CB99AD09AB896A130D0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -345,6 +393,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_BE3E8F3FC39A479FA9E83F843D609325"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C4C566089BA24F0580531917560ACD69"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -364,6 +418,18 @@
         "Entry"
         {
         "MsmKey" = "8:_D201A3113C02473AA830918E8E3E227D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D4E4045424304231A5399A6BA6B8EA87"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D5DFB50E138C46F8BFF729340F40F023"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -411,12 +477,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E1F6FD64036F4FD998A1AC00F7E2E13E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E225497C19E4470696FE79DCFD9CF7E5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -424,12 +484,6 @@
         "Entry"
         {
         "MsmKey" = "8:_E429A7DA5C274DED9DFF5607943D3B06"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EA3321FC2CE349AE81D0291E38C8A98D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -472,6 +526,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F42086736A0C4437A95D5D368B652FDA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F4FD178D0C424B02BE1478C09096FA6F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -637,6 +697,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_05D86A590F444AD081EFB7C16DC0242F"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_standstill-right.png"
+            "TargetName" = "8:B_standstill-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0CD6CD9A789A47A9961CFD36C73145C3"
             {
             "SourcePath" = "8:..\\data\\screens\\0_0_1.png"
@@ -757,10 +837,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_24C62F45297F445EAC5D04B959B8A8CF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2705A3A53EDD4C91A3E81E4D8ACC87EB"
             {
-            "SourcePath" = "8:..\\data\\sprites\\G_standstill-right.png"
-            "TargetName" = "8:G_standstill-right.png"
+            "SourcePath" = "8:..\\data\\sprites\\B_walk-left.png"
+            "TargetName" = "8:B_walk-left.png"
             "Tag" = "8:"
             "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
@@ -937,6 +1017,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F98CDDFB9404FD28773E821C855B5C3"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_jump-left.png"
+            "TargetName" = "8:B_jump-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48EF0C2A705948068654D09E36BA1D9D"
             {
             "SourcePath" = "8:..\\data\\sound\\theme2.mp3"
@@ -963,6 +1063,26 @@
             "TargetName" = "8:4_0_1.png"
             "Tag" = "8:"
             "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_544DB80B368349918A5F97369FDEC029"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_turn-right.png"
+            "TargetName" = "8:G_turn-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1317,6 +1437,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A67C9CC2FE747FDA9EB1E7046917803"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_jump-right.png"
+            "TargetName" = "8:G_jump-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_902B2E17BFE344479FE0B1A2F5140871"
             {
             "SourcePath" = "8:..\\data\\screens\\3_1_0.png"
@@ -1377,6 +1517,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_94A23E16E3DD4591BB05C88ECB543C67"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_walk-right.png"
+            "TargetName" = "8:B_walk-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9595D2ED19B14B47B2558105242556EA"
             {
             "SourcePath" = "8:..\\data\\screens\\4_0_b.dat"
@@ -1417,12 +1577,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B3F15934BBB4D02B323E76F68C4037D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_987153643F254ADFA12A9ADC62389EB4"
             {
-            "SourcePath" = "8:..\\data\\screens\\3_0_g_NB.png"
-            "TargetName" = "8:3_0_g_NB.png"
+            "SourcePath" = "8:..\\data\\sprites\\G_standstill-right.png"
+            "TargetName" = "8:G_standstill-right.png"
             "Tag" = "8:"
-            "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1437,12 +1597,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B6274068EFE41A49B820458A3001C7A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B3F15934BBB4D02B323E76F68C4037D"
             {
-            "SourcePath" = "8:..\\data\\sprites\\G_jump-left.png"
-            "TargetName" = "8:G_jump-left.png"
+            "SourcePath" = "8:..\\data\\screens\\3_0_g_NB.png"
+            "TargetName" = "8:3_0_g_NB.png"
             "Tag" = "8:"
-            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1477,10 +1637,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DB15BB1EBA040B8AD0A985F4376C412"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9DA3C56E2F1742A1A58F5B7B81A740AC"
             {
-            "SourcePath" = "8:..\\data\\sprites\\G_standstill-left.png"
-            "TargetName" = "8:G_standstill-left.png"
+            "SourcePath" = "8:..\\data\\sprites\\B_turn-right.png"
+            "TargetName" = "8:B_turn-right.png"
             "Tag" = "8:"
             "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
@@ -1497,10 +1657,50 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A02ACCD908EB40E2866B5513AAAF3BCD"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9E8548AE704848D0987D8DCC82A4B3C1"
             {
-            "SourcePath" = "8:..\\data\\sprites\\G_walk-left.png"
-            "TargetName" = "8:G_walk-left.png"
+            "SourcePath" = "8:..\\data\\sprites\\G_jump-left.png"
+            "TargetName" = "8:G_jump-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FCA7BBA0DC44569A7DD4F626A8C75E7"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_jump-right.png"
+            "TargetName" = "8:B_jump-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A13EE8C2849B42BD9A2EBEB54C983519"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_standstill-left.png"
+            "TargetName" = "8:G_standstill-left.png"
             "Tag" = "8:"
             "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
@@ -1617,6 +1817,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFC71C6FF2F54D109A06735E6222D7DA"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_walk-right.png"
+            "TargetName" = "8:G_walk-right.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B0681002C0DA4CB99AD09AB896A130D0"
             {
             "SourcePath" = "8:..\\data\\screens\\2_0_b.dat"
@@ -1697,6 +1917,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE3E8F3FC39A479FA9E83F843D609325"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_turn-left.png"
+            "TargetName" = "8:B_turn-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C4C566089BA24F0580531917560ACD69"
             {
             "SourcePath" = "8:..\\data\\general\\SplashScreen.png"
@@ -1743,6 +1983,46 @@
             "TargetName" = "8:1_0_g_NB.png"
             "Tag" = "8:"
             "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D4E4045424304231A5399A6BA6B8EA87"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\B_standstill-left.png"
+            "TargetName" = "8:B_standstill-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D5DFB50E138C46F8BFF729340F40F023"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_turn-left.png"
+            "TargetName" = "8:G_turn-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1897,26 +2177,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1F6FD64036F4FD998A1AC00F7E2E13E"
-            {
-            "SourcePath" = "8:..\\data\\sprites\\G_walk-right.png"
-            "TargetName" = "8:G_walk-right.png"
-            "Tag" = "8:"
-            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E225497C19E4470696FE79DCFD9CF7E5"
             {
             "SourcePath" = "8:..\\data\\screens\\3_1_1.png"
@@ -1943,26 +2203,6 @@
             "TargetName" = "8:4_0_0.png"
             "Tag" = "8:"
             "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EA3321FC2CE349AE81D0291E38C8A98D"
-            {
-            "SourcePath" = "8:..\\data\\sprites\\G_jump-right.png"
-            "TargetName" = "8:G_jump-right.png"
-            "Tag" = "8:"
-            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2103,6 +2343,26 @@
             "TargetName" = "8:3_1_g_NB.png"
             "Tag" = "8:"
             "Folder" = "8:_552B9EC8859D48DCAB18276F41260AAE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4FD178D0C424B02BE1478C09096FA6F"
+            {
+            "SourcePath" = "8:..\\data\\sprites\\G_walk-left.png"
+            "TargetName" = "8:G_walk-left.png"
+            "Tag" = "8:"
+            "Folder" = "8:_94512C70AAB84180B00CEC92E5902757"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2440,6 +2700,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2482FDDECD2844989DE68FC3E175CE4E"
+            {
+            "Name" = "8:Shortcut to Lucarne"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_C5E6691DFD7D4C7DAB156540CC118293"
+            "Folder" = "8:_9843AAE9604B492293960E85611DCCD0"
+            "WorkingFolder" = "8:_929F2E2CA1754193B38FC09E0E2034D2"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4554E0957C9E45A1AA9042F1A22906C5"
+            {
+            "Name" = "8:Shortcut to Lucarne"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_C5E6691DFD7D4C7DAB156540CC118293"
+            "Folder" = "8:_B1318CB63BA74E5EB808EDE384EACFA8"
+            "WorkingFolder" = "8:_929F2E2CA1754193B38FC09E0E2034D2"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

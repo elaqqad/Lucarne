@@ -1,16 +1,18 @@
 physics_center_x  =  0
 physics_center_y  =  0
-physics_size_x    = 12
-physics_size_y    = 34
+physics_size_x    = 15
+physics_size_y    = 48
 physics_can_sleep = false
 physics_rotation  = false
 
-addanim('G_standstill-left.png',32)
-addanim('G_walk-left.png',32)
-addanim('G_jump-left.png',32)
-addanim('G_standstill-right.png',32)
-addanim('G_walk-right.png',32)
-addanim('G_jump-right.png',32)
+addanim('G_standstill-left.png',40)
+addanim('G_walk-left.png',40)
+addanim('G_jump-left.png',40)
+addanim('G_standstill-right.png',40)
+addanim('G_walk-right.png',40)
+addanim('G_jump-right.png',40)
+addanim('G_turn-left.png', 40)
+addanim('G_turn-right.png', 40)
 
 playanim('G_standstill-left.png', true)
 stopanim()
@@ -34,8 +36,8 @@ function step()
 	  else
 	    -- uho, need to turn left
 	    state = 'turn_left'
-	    --playanim('gripe.turn_right_to_left.png',false)
-		playanim('G_standstill-left.png', false)
+	    playanim('G_turn-left.png',false)
+		--playanim('G_standstill-left.png', false)
 	  end
     elseif Key_l then
 	  if state == 'wait_right' then 
@@ -45,8 +47,8 @@ function step()
 	  else
 	    -- uho, need to turn right
 	    state = 'turn_right'
-	    --playanim('gripe.turn_left_to_right.png',false)
-		playanim('G_standstill-right.png', false)
+	    playanim('G_turn-right.png',false)
+		--playanim('G_standstill-right.png', false)
 	  end
 	end
   else
